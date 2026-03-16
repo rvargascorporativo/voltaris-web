@@ -163,7 +163,21 @@
       background: #16a34a;
       color: white;
     }
+.producto-link{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
 
+.btn-producto{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  font-size:14px;
+  font-weight:bold;
+}
     .btn-whatsapp:hover {
       background: #15803d;
     }
@@ -578,25 +592,26 @@
     <div class="container">
       <div class="section-title">
         <small>Catálogo</small>
-        <h3>Productos y soluciones destacadas.</h3>
+        <h3>Productos y soluciones destacadas</h3>
         <p>
   Explora nuestras líneas de productos en electromovilidad, energía solar, automatización y equipos eléctricos.
   Próximamente incorporaremos fichas técnicas, stock y fotografías reales de cada producto.
 </p>
       </div>
 
-      <div class="catalogo">
-        <div class="producto">
-          <img src="https://blog.movistar.com.co/wp-content/uploads/2024/05/scooter-electrico.webp" alt="Scooter eléctrico">
-          <div class="producto-content">
-            <small>Electromovilidad</small>
-            <h4>Scooter eléctrico</h4>
-            <p>Movilidad eléctrica urbana eficiente para soluciones modernas de transporte.</p>
-            <a href="https://wa.me/59169969051" target="_blank">Consultar por WhatsApp</a>
-          </div>
-        </div>
-
-        <div class="producto">
+      <a href="scooter-electrico.html" class="producto-link">
+  <div class="producto">
+    <img src="https://blog.movistar.com.co/wp-content/uploads/2024/05/scooter-electrico.webp" alt="Scooter eléctrico">
+    <div class="producto-content">
+      <small>ELECTROMOVILIDAD</small>
+      <h4>Scooter eléctrico</h4>
+      <p>Movilidad eléctrica urbana eficiente para soluciones modernas de transporte.</p>
+      <span class="btn-producto">Ver producto</span>
+    </div>
+  </div>
+</a>
+      
+            <div class="producto">
           <img src="https://www.aforenergy.com/wp-content/uploads/2025/08/6-1.webp" alt="Inversores solares">
           <div class="producto-content">
             <small>Energía solar</small>
@@ -655,6 +670,18 @@
             <a href="https://wa.me/59169969051" target="_blank">Consultar por WhatsApp</a>
           </div>
         </div>
+
+      <a href="https://www.smartpropel.com/wp-content/uploads/2021/06/36V-7.8Ah-4.jpg" class="producto-link">
+  <div class="producto">
+    <img src="bateria.jpg">
+    <div class="producto-content">
+      <small>ALMACENAMIENTO</small>
+      <h4>Baterías de litio</h4>
+      <p>Baterías para scooters, motos eléctricas y sistemas solares.</p>
+      <span class="btn-producto">Ver información</span>
+    </div>
+  </div>
+</a>
 
         <div class="producto">
           <img src="https://simacsl.com/wp-content/uploads/2020/11/AUTOMATIZACION-ELECTRICA-1.jpg" alt="Automatización">
