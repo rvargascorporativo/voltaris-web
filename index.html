@@ -4,19 +4,496 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Voltaris | Ingeniería Eléctrica</title>
-<style> * { box-sizing: border-box; margin: 0; padding: 0; } :root{
-  --primary:#22c7f2;
-  --primary-dark:#2563eb;
-  --text:#f8fafc;
-  --muted:#cbd5e1;
-  --border:#1e293b;
-  --bg:#0b1220;
-  --bg-soft:#111827;
-  --card:#0f172a;
-  --white:#ffffff;
-} body { font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; } .container { width: 92%; max-width: 1200px; margin: 0 auto; } header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.96); border-bottom: 1px solid var(--border); backdrop-filter: blur(10px); } .nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; gap: 20px; } .brand { display: flex; align-items: center; gap: 14px; } .brand img { width: 52px; height: 52px; object-fit: contain; border-radius: 14px; background: white; border: 1px solid var(--border); padding: 4px; } .brand-text h1 { font-size: 24px; letter-spacing: 0.5px; color: var(--primary); } .brand-text span { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 2px; } nav a { color: var(--muted); text-decoration: none; margin-left: 24px; font-size: 15px; font-weight: 600; } nav a:hover { color: var(--primary); } 
-  .hero { background: radial-gradient(circle at top left, rgba(37,99,235,0.10), transparent 30%), linear-gradient(180deg, #ffffff 0%, #f8fbff 100%); padding: 90px 0 70px; border-bottom: 1px solid var(--border); } 
-  .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; } .pill { display: inline-block; padding: 10px 18px; border-radius: 999px; background: var(--accent-soft); border: 1px solid #bfdbfe; color: #1d4ed8; font-size: 14px; margin-bottom: 24px; font-weight: 600; } .hero h2 { font-size: 56px; line-height: 1.08; margin-bottom: 22px; color: var(--primary); } .hero p { color: var(--muted); font-size: 19px; margin-bottom: 30px; max-width: 700px; } .buttons { display: flex; flex-wrap: wrap; gap: 14px; } .buttons a { display: inline-block; text-decoration: none; padding: 15px 24px; border-radius: 14px; font-size: 15px; font-weight: bold; transition: 0.2s ease; } .btn-primary { background: var(--primary); color: white; } .btn-primary:hover { background: #1e293b; } .btn-whatsapp { background: #16a34a; color: white; } .btn-whatsapp:hover { background: #15803d; } .hero-card { background: white; border: 1px solid var(--border); border-radius: 28px; padding: 26px; box-shadow: 0 16px 40px rgba(15,23,42,0.06); } .hero-card h3 { font-size: 15px; color: #64748b; margin-bottom: 20px; font-weight: 600; } .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; } .spec { border: 1px solid var(--border); border-radius: 18px; padding: 16px; background: var(--bg-soft); font-size: 14px; color: var(--text); font-weight: 600; } section { padding: 85px 0; } .section-title small { display: inline-block; font-size: 12px; text-transform: uppercase; letter-spacing: 3px; color: #2563eb; margin-bottom: 12px; font-weight: 700; } .section-title h3 { font-size: 40px; color: var(--primary); margin-bottom: 14px; max-width: 760px; } .section-title p { color: var(--muted); max-width: 780px; font-size: 17px; } .services-grid { margin-top: 34px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; } .service-card { background: white; border: 1px solid var(--border); border-radius: 24px; padding: 24px; box-shadow: 0 10px 25px rgba(15,23,42,0.04); } .service-card h4 { font-size: 21px; margin-bottom: 12px; color: var(--primary); } .service-card p { color: var(--muted); font-size: 15px; } .catalog-section { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); } .catalogo { margin-top: 34px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; } .producto { background: white; border: 1px solid var(--border); border-radius: 22px; overflow: hidden; box-shadow: 0 10px 24px rgba(15,23,42,0.04); } .producto img { width: 100%; height: 210px; object-fit: cover; display: block; } .producto-content { padding: 18px; } .producto small { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #64748b; margin-bottom: 10px; font-weight: 700; } .producto h4 { font-size: 20px; color: var(--primary); margin-bottom: 10px; } .producto p { color: var(--muted); font-size: 14px; margin-bottom: 14px; } .producto a { display: inline-block; text-decoration: none; padding: 11px 16px; border-radius: 12px; background: var(--accent-soft); color: #1d4ed8; font-size: 14px; font-weight: 700; } .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; margin-top: 34px; } .about-text { color: var(--muted); font-size: 17px; line-height: 1.8; } .info-box { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 20px; padding: 20px; margin-bottom: 14px; } .info-box strong { display: block; color: var(--primary); margin-bottom: 8px; font-size: 16px; } .info-box span { color: var(--muted); font-size: 14px; } .contact-section { background: white; border-top: 1px solid var(--border); } .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 34px; } .contact-card, .form-card { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 24px; padding: 24px; } .contact-card h4, .form-card h4 { color: var(--primary); margin-bottom: 16px; font-size: 22px; } .contact-data div { margin-bottom: 12px; color: var(--muted); font-size: 16px; } .contact-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; } .contact-buttons a { display: inline-block; text-decoration: none; padding: 13px 18px; border-radius: 12px; font-weight: 700; font-size: 14px; } .wa1 { background:#16a34a; color:white; } .wa2 { background:#15803d; color:white; } .form-card input, .form-card textarea { width: 100%; margin-bottom: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border); background: white; color: var(--text); font-size: 14px; } .form-card textarea { min-height: 130px; resize: vertical; } .form-card button { width: 100%; border: none; background: var(--primary); color: white; padding: 14px 20px; border-radius: 14px; font-size: 15px; font-weight: bold; cursor: pointer; } footer { text-align: center; padding: 34px 20px; background: var(--primary); color: #cbd5e1; margin-top: 0; font-size: 14px; } @media (max-width: 1024px) { .catalogo { grid-template-columns: repeat(2, 1fr); } .services-grid { grid-template-columns: repeat(2, 1fr); } } @media (max-width: 860px) { .hero-grid, .about-grid, .contact-grid, .services-grid, .catalogo, .spec-grid { grid-template-columns: 1fr; } nav { display: none; } .hero h2 { font-size: 38px; } .brand-text h1 { font-size: 20px; } } </style>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root{
+      --primary:#0f172a;
+      --primary-dark:#1e3a8a;
+      --accent:#2563eb;
+      --accent-soft:#dbeafe;
+      --text:#0f172a;
+      --muted:#475569;
+      --border:#e2e8f0;
+      --bg:#ffffff;
+      --bg-soft:#f8fafc;
+      --card:#ffffff;
+      --white:#ffffff;
+      --success:#16a34a;
+      --success-dark:#15803d;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 14px;
+      background: white;
+      border: 1px solid var(--border);
+      padding: 4px;
+    }
+
+    .brand-text h1 {
+      font-size: 24px;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+    }
+
+    .brand-text span {
+      font-size: 11px;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #94a3b8;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      padding: 90px 0 70px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid #bfdbfe;
+      color: var(--accent);
+      font-size: 14px;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+
+    .hero h2 {
+      font-size: 56px;
+      line-height: 1.08;
+      margin-bottom: 22px;
+      color: var(--primary);
+      max-width: 650px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 19px;
+      margin-bottom: 30px;
+      max-width: 700px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 15px 24px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #16a34a, #15803d);
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+    }
+
+    .trust {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      object-fit: cover;
+      border-radius: 26px;
+      box-shadow: 0 20px 50px rgba(15,23,42,0.10);
+      display: block;
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-title small {
+      display: inline-block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--accent);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .section-title h3 {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 14px;
+      max-width: 760px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 780px;
+      font-size: 17px;
+    }
+
+    .services-grid {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(15,23,42,0.05);
+      transition: 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .service-card h4 {
+      font-size: 21px;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .catalog-section {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .catalogo {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .producto {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.05);
+      transition: 0.2s ease;
+    }
+
+    .producto:hover {
+      transform: translateY(-4px);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .producto-content {
+      padding: 18px;
+    }
+
+    .producto small {
+      display: inline-block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #64748b;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .producto h4 {
+      font-size: 20px;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .producto p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .producto a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 11px 16px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      margin-top: 34px;
+    }
+
+    .about-text {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .info-box {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 10px 25px rgba(15,23,42,0.04);
+    }
+
+    .info-box strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .info-box span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-section {
+      background: white;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 34px;
+    }
+
+    .contact-card,
+    .form-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(15,23,42,0.04);
+    }
+
+    .contact-card h4,
+    .form-card h4 {
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+
+    .contact-data div {
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-buttons a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 13px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      color: white;
+    }
+
+    .wa1 { background:#16a34a; }
+    .wa2 { background:#15803d; }
+
+    .form-card input,
+    .form-card textarea {
+      width: 100%;
+      margin-bottom: 14px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .form-card textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-card button {
+      width: 100%;
+      border: none;
+      background: var(--primary);
+      color: white;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 20px;
+      background: var(--primary);
+      color: #cbd5e1;
+      margin-top: 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1024px) {
+      .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h2 {
+        font-size: 46px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .services-grid,
+      .catalogo {
+        grid-template-columns: 1fr;
+      }
+
+      .trust {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero h2 {
+        font-size: 38px;
+      }
+
+      .hero-visual img {
+        min-height: 280px;
+      }
+
+      .brand-text h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
 <body>
 
   <header>
@@ -29,84 +506,122 @@
         </div>
       </div>
 
-   <nav>
-  <a href="#inicio">Inicio</a>
-  <a href="#servicios">Servicios</a>
-  <a href="#catalogo">Productos</a>
-  <a href="#solarrate">SolarRate</a>
-  <a href="#nosotros">Nosotros</a>
-  <a href="#contacto">Contacto</a>
-  <a href="#registro">Registro</a>
-</nav>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#catalogo">Productos</a>
+        <a href="#solarrate">SolarRate</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </div>
   </header>
 
- <section id="inicio" class="hero">
-  <div class="container hero-grid">
+  <section id="inicio" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="pill">Soluciones en energía y electromovilidad</div>
 
-    <div>
-      <div class="pill">Soluciones en energía y electromovilidad</div>
+        <h2>Reduce tus costos eléctricos y moderniza tu energía con soluciones inteligentes.</h2>
 
-      <h2>
-        Reduce tus costos eléctricos y moderniza tu energía con soluciones inteligentes.
-      </h2>
+        <p>
+          En Voltaris importamos, diseñamos e implementamos soluciones en energía solar,
+          electromovilidad y sistemas eléctricos para hogares, empresas e industrias en Bolivia.
+        </p>
 
-      <p>
-        En Voltaris importamos, diseñamos e implementamos soluciones en energía solar,
-        electromovilidad y sistemas eléctricos para hogares, empresas e industrias en Bolivia.
-      </p>
+        <div class="buttons">
+          <a class="btn-primary" href="#catalogo">Ver productos</a>
+          <a class="btn-whatsapp" href="https://wa.me/59169969051" target="_blank">Cotizar por WhatsApp</a>
+        </div>
 
-      <div class="buttons">
-        <a class="btn-primary" href="#catalogo">Ver productos</a>
-        <a class="btn-whatsapp" href="https://wa.me/59169969051" target="_blank">
-          Cotizar por WhatsApp
-        </a>
+        <div class="trust">
+          <div>✔ Equipos importados directamente</div>
+          <div>✔ Asesoramiento técnico especializado</div>
+          <div>✔ Soluciones para hogares y empresas</div>
+          <div>✔ Atención en Bolivia</div>
+        </div>
       </div>
 
-      <!-- BLOQUE DE CONFIANZA -->
-      <div class="trust">
-        <div>✔ Equipos importados directamente</div>
-        <div>✔ Asesoramiento técnico especializado</div>
-        <div>✔ Soluciones para hogares y empresas</div>
-        <div>✔ Atención en Bolivia</div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80" alt="Electromovilidad Voltaris">
       </div>
     </div>
-
-    <!-- TARJETA VISUAL -->
-    <div class="hero-visual">
-      <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80" alt="Electromovilidad Voltaris">
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <section>
-  <div class="container">
-    <div class="section-title">
-      <small>Ventajas</small>
-      <h3>¿Por qué elegir Voltaris?</h3>
+    <div class="container">
+      <div class="section-title">
+        <small>Ventajas</small>
+        <h3>¿Por qué elegir Voltaris?</h3>
+        <p>
+          Combinamos importación directa, soporte técnico y visión comercial para ofrecer
+          soluciones eléctricas y energéticas con enfoque práctico y profesional.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Importación directa</h4>
+          <p>Acceso a equipos eléctricos y tecnológicos con mejores precios y sin intermediarios innecesarios.</p>
+        </div>
+
+        <div class="service-card">
+          <h4>Soporte técnico real</h4>
+          <p>No solo vendemos productos; brindamos asesoramiento técnico especializado para una mejor decisión.</p>
+        </div>
+
+        <div class="service-card">
+          <h4>Soluciones completas</h4>
+          <p>Desde el suministro del equipo hasta la implementación de soluciones en energía y movilidad eléctrica.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="services-grid">
-
-      <div class="service-card">
-        <h4>Importación directa</h4>
-        <p>Acceso a equipos eléctricos y tecnológicos con mejores precios y sin intermediarios.</p>
+  <section id="servicios">
+    <div class="container">
+      <div class="section-title">
+        <small>Servicios</small>
+        <h3>Soluciones técnicas orientadas a energía, industria y movilidad eléctrica.</h3>
+        <p>
+          Desarrollamos servicios especializados para proyectos eléctricos, energéticos e industriales,
+          con enfoque en calidad técnica, eficiencia y soporte comercial.
+        </p>
       </div>
 
-      <div class="service-card">
-        <h4>Soporte técnico real</h4>
-        <p>No solo vendemos productos, brindamos asesoramiento técnico especializado.</p>
-      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Ingeniería eléctrica</h4>
+          <p>Diseño, cálculo, revisión y desarrollo de proyectos eléctricos para aplicaciones residenciales, comerciales e industriales.</p>
+        </div>
 
-      <div class="service-card">
-        <h4>Soluciones completas</h4>
-        <p>Desde el equipo hasta la implementación: energía, movilidad eléctrica e industria.</p>
-      </div>
+        <div class="service-card">
+          <h4>Generación distribuida</h4>
+          <p>Evaluación técnica, dimensionamiento e integración de sistemas fotovoltaicos conectados a red.</p>
+        </div>
 
+        <div class="service-card">
+          <h4>Automatización industrial</h4>
+          <p>Tableros, instrumentación, control y soluciones para optimización operativa en procesos industriales.</p>
+        </div>
+
+        <div class="service-card">
+          <h4>Electromovilidad</h4>
+          <p>Venta, asesoramiento técnico y soluciones para scooters, motos eléctricas y equipos asociados.</p>
+        </div>
+
+        <div class="service-card">
+          <h4>Instalación y mantenimiento</h4>
+          <p>Montaje de sistemas eléctricos, mantenimiento preventivo y correctivo, soporte técnico y reparación.</p>
+        </div>
+
+        <div class="service-card">
+          <h4>Comercialización e importación</h4>
+          <p>Venta e importación de equipos eléctricos, repuestos, accesorios y soluciones energéticas.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="catalogo" class="catalog-section">
     <div class="container">
@@ -114,9 +629,9 @@
         <small>Catálogo</small>
         <h3>Productos y soluciones destacadas.</h3>
         <p>
-  Explora nuestras líneas de productos en electromovilidad, energía solar, automatización y equipos eléctricos.
-  Próximamente incorporaremos fichas técnicas, stock y fotografías reales de cada producto.
-</p>
+          Explora nuestras líneas de productos en electromovilidad, energía solar, automatización y equipos eléctricos.
+          Próximamente incorporaremos fichas técnicas, stock y fotografías reales de cada producto.
+        </p>
       </div>
 
       <div class="catalogo">
@@ -125,10 +640,8 @@
           <div class="producto-content">
             <small>Electromovilidad</small>
             <h4>Scooter eléctrico</h4>
-            <p><strong>Desde Bs1900</strong><br>Movilidad eléctrica eficiente para uso diario.</p>
-            <a href="https://wa.me/59169969051" target="_blank">
-  Cotizar ahora
-</a>
+            <p><strong>Desde Bs 1.900</strong><br>Movilidad eléctrica eficiente para uso diario.</p>
+            <a href="https://wa.me/59169969051" target="_blank">Cotizar ahora</a>
           </div>
         </div>
 
@@ -193,7 +706,7 @@
         </div>
 
         <div class="producto">
-          <img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=1200&q=80" alt="Automatización">
+          <img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=1200&q=80" alt="Sistema de automatización">
           <div class="producto-content">
             <small>Control y monitoreo</small>
             <h4>Sistema de automatización</h4>
@@ -204,47 +717,47 @@
       </div>
     </div>
   </section>
-<section id="solarrate" class="solarrate-section">
-  <div class="container">
-    <div class="section-title">
-      <small>Herramienta técnica</small>
-      <h3>Evalúa tu proyecto solar con SolarRate.</h3>
-      <p>
-        SolarRate es nuestra herramienta de evaluación técnico-económica para
-        generación distribuida fotovoltaica. Permite estimar el dimensionamiento
-        del sistema, la producción energética y el ahorro económico esperado.
-      </p>
-    </div>
 
-    <div class="about-grid">
-      <div class="about-text">
-        Ideal para clientes residenciales, comerciales e industriales que desean
-        analizar la viabilidad preliminar de un sistema solar conectado a red
-        antes de solicitar una propuesta técnica formal.
+  <section id="solarrate">
+    <div class="container">
+      <div class="section-title">
+        <small>Herramienta técnica</small>
+        <h3>Evalúa tu proyecto solar con SolarRate.</h3>
+        <p>
+          SolarRate es nuestra herramienta de evaluación técnico-económica para generación distribuida fotovoltaica.
+          Permite estimar el dimensionamiento del sistema, la producción energética y el ahorro económico esperado.
+        </p>
       </div>
 
-      <div>
-        <div class="info-box">
-          <strong>¿Qué puedes evaluar?</strong>
-          <span>Consumo eléctrico, potencia recomendada, generación esperada y ahorro estimado.</span>
+      <div class="about-grid">
+        <div class="about-text">
+          Ideal para clientes residenciales, comerciales e industriales que desean analizar la viabilidad preliminar
+          de un sistema solar conectado a red antes de solicitar una propuesta técnica formal.
         </div>
-        <div class="info-box">
-          <strong>Aplicación</strong>
-          <span>Herramienta orientada a estudios preliminares de generación distribuida.</span>
-        </div>
-        <div class="info-box">
-          <strong>Acceso</strong>
-          <span>Disponible en línea para consulta rápida y apoyo comercial.</span>
+
+        <div>
+          <div class="info-box">
+            <strong>¿Qué puedes evaluar?</strong>
+            <span>Consumo eléctrico, potencia recomendada, generación esperada y ahorro estimado.</span>
+          </div>
+          <div class="info-box">
+            <strong>Aplicación</strong>
+            <span>Herramienta orientada a estudios preliminares de generación distribuida.</span>
+          </div>
+          <div class="info-box">
+            <strong>Acceso</strong>
+            <span>Disponible en línea para consulta rápida y apoyo comercial.</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="buttons" style="margin-top: 28px;">
-      <a class="btn-primary" href="https://solarrate-a8c7a.web.app/" target="_blank">Abrir SolarRate</a>
-      <a class="btn-whatsapp" href="https://wa.me/59169969051?text=Hola,%20quiero%20evaluar%20un%20proyecto%20solar%20con%20SolarRate" target="_blank">Solicitar asesoramiento</a>
+      <div class="buttons" style="margin-top: 28px;">
+        <a class="btn-primary" href="https://solarrate-a8c7a.web.app/" target="_blank">Abrir SolarRate</a>
+        <a class="btn-whatsapp" href="https://wa.me/59169969051?text=Hola,%20quiero%20evaluar%20un%20proyecto%20solar%20con%20SolarRate" target="_blank">Solicitar asesoramiento</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
   <section id="nosotros">
     <div class="container">
       <div class="section-title">
@@ -304,16 +817,15 @@
         </div>
 
         <div class="form-card">
-  <h4>Solicitar información</h4>
-
-  <form action="https://formspree.io/f/xxxxxxxx" method="POST">
-    <input type="text" name="nombre" placeholder="Nombre" required />
-    <input type="email" name="email" placeholder="Correo electrónico" required />
-    <input type="text" name="asunto" placeholder="Asunto" required />
-    <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto o producto de interés" required></textarea>
-    <button type="submit">Enviar mensaje</button>
-  </form>
-</div>
+          <h4>Solicitar información</h4>
+          <form action="https://formspree.io/f/xxxxxxxx" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required />
+            <input type="email" name="email" placeholder="Correo electrónico" required />
+            <input type="text" name="asunto" placeholder="Asunto" required />
+            <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto o producto de interés" required></textarea>
+            <button type="submit">Enviar mensaje</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
