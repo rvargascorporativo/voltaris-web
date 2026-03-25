@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Griden</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #1c1c1c;
+    }
 
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.7;
+      max-width: 850px;
+      margin-bottom: 40px;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      scroll-margin-top: 100px;
+    }
+
+    .blog-card h2 {
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .blog-card p {
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 0;
+    }
+
+    .blog-card a {
+      display: inline-block;
+      margin-top: 16px;
+      color: #0a2540;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .blog-card a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Blog Griden</h1>
+    <p class="intro">
+      En esta sección compartimos información útil sobre energía solar, generación distribuida,
+      eficiencia energética, electromovilidad, automatización e innovación aplicada a Bolivia.
+      Nuestro objetivo es brindar contenido técnico y práctico para hogares, comercios, industrias
+      y personas interesadas en soluciones energéticas modernas.
+    </p>
+
+    <div class="blog-grid">
+      <section class="blog-card" id="solar">
+        <h2>Tendencias en energía solar</h2>
+        <p>
+          La energía solar continúa creciendo como una de las principales alternativas para reducir
+          costos eléctricos y avanzar hacia un consumo más sostenible. En Bolivia, el interés por
+          soluciones fotovoltaicas viene aumentando en hogares, comercios e industrias.
+        </p>
+      </section>
+
+      <section class="blog-card" id="paneles">
+        <h2>¿Cuántos paneles solares necesito?</h2>
+        <p>
+          La cantidad de paneles depende del consumo mensual, la radiación solar disponible, el tipo
+          de instalación y el porcentaje de compensación que se desea alcanzar. Un análisis técnico
+          adecuado permite dimensionar correctamente el sistema.
+        </p>
+      </section>
+
+      <section class="blog-card" id="ahorro">
+        <h2>Ahorro de energía en hogares y empresas</h2>
+        <p>
+          Mejorar la eficiencia energética permite reducir costos sin afectar la productividad ni el
+          confort. Acciones como modernizar equipos, optimizar horarios de consumo y usar tecnologías
+          eficientes generan beneficios económicos reales.
+        </p>
+      </section>
+
+      <section class="blog-card" id="electromovilidad">
+        <h2>Electromovilidad en Bolivia</h2>
+        <p>
+          La electromovilidad representa una oportunidad para modernizar el transporte y reducir el uso
+          de combustibles fósiles. Su implementación requiere infraestructura, planificación y soluciones
+          adaptadas a las condiciones locales.
+        </p>
+      </section>
+
+      <section class="blog-card" id="gd">
+        <h2>Generación distribuida en Bolivia</h2>
+        <p>
+          Bolivia cuenta con normativa que permite la generación distribuida para pequeña, mediana y gran
+          demanda. Esto abre oportunidades para que los usuarios produzcan parte de su propia energía y
+          optimicen su facturación eléctrica.
+        </p>
+      </section>
+
+      <section class="blog-card" id="automatizacion">
+        <h2>Automatización industrial aplicada</h2>
+        <p>
+          La automatización permite mejorar procesos, elevar la confiabilidad operativa y optimizar recursos.
+          Su aplicación puede abarcar control, monitoreo, protección y gestión inteligente de instalaciones.
+        </p>
+      </section>
+
+      <section class="blog-card" id="noticias">
+        <h2>Noticias y novedades de Griden</h2>
+        <p>
+          Aquí compartiremos novedades institucionales, nuevos servicios, publicaciones, proyectos y avances
+          relacionados con energía, tecnología e innovación desarrollados por Griden.
+        </p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
