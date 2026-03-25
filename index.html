@@ -1113,17 +1113,18 @@
 <!-- FIREBASE COMPAT -->
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-function openMobileMenu() {
-  document.getElementById("mobileMenu").classList.add("active");
-  document.getElementById("mobileMenuOverlay").classList.add("active");
-}
 
-function closeMobileMenu() {
-  document.getElementById("mobileMenu").classList.remove("active");
-  document.getElementById("mobileMenuOverlay").classList.remove("active");
-}
-  
 <script>
+  function openMobileMenu() {
+    document.getElementById("mobileMenu").classList.add("active");
+    document.getElementById("mobileMenuOverlay").classList.add("active");
+  }
+
+  function closeMobileMenu() {
+    document.getElementById("mobileMenu").classList.remove("active");
+    document.getElementById("mobileMenuOverlay").classList.remove("active");
+  }
+
   function openAuth() {
     document.getElementById("authModal").style.display = "flex";
     clearAuthMessage();
@@ -1212,42 +1213,44 @@ function closeMobileMenu() {
     auth.signOut()
       .then(() => {
         closeAuth();
+        closeMobileMenu();
       })
       .catch((e) => {
         showAuthMessage("Firebase: " + e.message, true);
       });
   }
 
- auth.onAuthStateChanged((user) => {
-  const authNavLink = document.getElementById("authNavLink");
-  const logoutLink = document.getElementById("logoutLink");
-  const mobileAuthLink = document.getElementById("mobileAuthLink");
-  const mobileLogoutLink = document.getElementById("mobileLogoutLink");
+  auth.onAuthStateChanged((user) => {
+    const authNavLink = document.getElementById("authNavLink");
+    const logoutLink = document.getElementById("logoutLink");
+    const mobileAuthLink = document.getElementById("mobileAuthLink");
+    const mobileLogoutLink = document.getElementById("mobileLogoutLink");
 
-  if (user) {
-    const email = user.email || "Usuario";
-    const nombreCorto = email.split("@")[0];
-    const textoUsuario = "Hola, " + nombreCorto;
+    if (user) {
+      const email = user.email || "Usuario";
+      const nombreCorto = email.split("@")[0];
+      const textoUsuario = "Hola, " + nombreCorto;
 
-    authNavLink.textContent = textoUsuario;
-    mobileAuthLink.textContent = textoUsuario;
+      authNavLink.textContent = textoUsuario;
+      mobileAuthLink.textContent = textoUsuario;
 
-    authNavLink.onclick = function () { openAuth(); };
-    mobileAuthLink.onclick = function () { openAuth(); closeMobileMenu(); };
+      authNavLink.onclick = function () { openAuth(); };
+      mobileAuthLink.onclick = function () { openAuth(); closeMobileMenu(); };
 
-    logoutLink.style.display = "inline-block";
-    mobileLogoutLink.style.display = "block";
-  } else {
-    authNavLink.textContent = "Mi cuenta";
-    mobileAuthLink.textContent = "Mi cuenta";
+      logoutLink.style.display = "inline-block";
+      mobileLogoutLink.style.display = "block";
+    } else {
+      authNavLink.textContent = "Mi cuenta";
+      mobileAuthLink.textContent = "Mi cuenta";
 
-    authNavLink.onclick = function () { openAuth(); };
-    mobileAuthLink.onclick = function () { openAuth(); closeMobileMenu(); };
+      authNavLink.onclick = function () { openAuth(); };
+      mobileAuthLink.onclick = function () { openAuth(); closeMobileMenu(); };
 
-    logoutLink.style.display = "none";
-    mobileLogoutLink.style.display = "none";
-  }
-});
+      logoutLink.style.display = "none";
+      mobileLogoutLink.style.display = "none";
+    }
+  });
 </script>
+
 </body>
 </html>
