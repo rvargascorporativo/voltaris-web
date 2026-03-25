@@ -20,7 +20,90 @@
       margin: 0;
       padding: 0;
     }
+.footer-links-section {
+  background: #f8fafc;
+  border-top: 1px solid var(--border);
+  padding: 60px 0 20px;
+}
 
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.2fr 1fr;
+  gap: 34px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: var(--primary);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.footer-col a {
+  display: block;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 8px;
+  transition: 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--accent);
+}
+
+.footer-col p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.footer-socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-bottom-line {
+  margin-top: 28px;
+  border-top: 1px solid #cbd5e1;
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-links-section {
+    padding: 40px 0 16px;
+  }
+
+  .footer-col h4 {
+    font-size: 17px;
+  }
+}
     :root{
       --primary:#0f172a;
       --primary-dark:#1e3a8a;
@@ -1087,9 +1170,64 @@
     </div>
   </section>
 
-  <footer>
-    © 2026 Griden · Energía · Tecnología · Soluciones
-  </footer>
+<section class="footer-links-section">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Sección Blog</h4>
+        <a href="#">Tendencias en energía solar</a>
+        <a href="#">¿Cuántos paneles solares necesito?</a>
+        <a href="#">Ahorro de energía en hogares y empresas</a>
+        <a href="#">Electromovilidad en Bolivia</a>
+        <a href="#">Generación distribuida en Bolivia</a>
+        <a href="#">Automatización industrial aplicada</a>
+        <a href="#">Noticias y novedades de Griden</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atención al cliente</h4>
+        <a href="javascript:void(0)" onclick="openAuth()">Mi cuenta</a>
+        <a href="#contacto">Solicitar información</a>
+        <a href="https://wa.me/59169969051" target="_blank">Contacto por WhatsApp</a>
+        <a href="#">Seguimiento de cotizaciones</a>
+        <a href="#">Preguntas frecuentes</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sobre Griden</h4>
+        <p>
+          Griden es una empresa orientada a soluciones en energía, electromovilidad,
+          ingeniería eléctrica y tecnología, con enfoque en asesoramiento técnico,
+          importación y desarrollo de proyectos aplicados en Bolivia.
+        </p>
+
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/gridenenergia/" target="_blank" aria-label="Facebook">f</a>
+          <a href="www.instagram.com/gridenbo/" target="_blank" aria-label="Instagram">◎</a>
+          <a href="www.tiktok.com/@griden.energa/" target="_blank" aria-label="TikTok">♪</a>
+          <a href="www.linkedin.com/company/griden-bolivia/" target="_blank" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Información</h4>
+        <a href="#nosotros">Conoce Griden</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Política de cookies</a>
+        <a href="#">Código de comercio</a>
+        <a href="#">Libro de reclamaciones</a>
+        <a href="#">Redes sociales</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom-line"></div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Griden · Energía · Tecnología · Soluciones
+</footer>
 
   <!-- MODAL LOGIN / REGISTRO -->
   <div id="authModal" class="auth-modal">
