@@ -2,10 +2,134 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trabaja con nosotros - Griden</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #1c1c1c;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .text p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin-top: 60px;
+    }
+
+    .cv-box {
+      margin-top: 30px;
+      background: #0a2540;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .cv-box strong {
+      color: #00d084;
+    }
+
+    .email {
+      font-size: 18px;
+      margin-top: 10px;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
+<div class="container">
+
   <h1>Trabaja con nosotros</h1>
-  <p>Envíanos tu CV a: griden.energia@gmail.com</p>
+
+  <div class="grid">
+    <div>
+      <!-- Cambia esta imagen por una tuya -->
+      <img src="https://images.unsplash.com/photo-1581091012184-5c2b7a2e3b0f" alt="Equipo de trabajo">
+    </div>
+
+    <div class="text">
+      <p>
+        En Griden, creemos en el poder de la energía, la tecnología y la innovación
+        para transformar la forma en que las personas consumen y gestionan la electricidad.
+      </p>
+
+      <p>
+        Somos una empresa orientada a soluciones en energía solar, generación distribuida,
+        eficiencia energética e ingeniería eléctrica, con un enfoque práctico y adaptado
+        a la realidad de Bolivia.
+      </p>
+
+      <p>
+        Buscamos personas comprometidas, con iniciativa, criterio técnico y visión de crecimiento,
+        que quieran formar parte de proyectos reales con impacto en el sector energético.
+      </p>
+
+      <p>
+        Si deseas desarrollar tu carrera en un entorno dinámico y con propósito, este es tu lugar.
+      </p>
+    </div>
+  </div>
+
+  <h2 class="section-title">Postulación</h2>
+
+  <div class="cv-box">
+    <p>Envía tu CV al correo:</p>
+    
+    <span class="email">
+      <strong>griden.energia@gmail.com</strong>
+    </span>
+
+    <p style="margin-top:15px;">
+      Coloca como asunto:<br>
+      <strong>Solicitud de trabajo</strong>
+    </p>
+  </div>
+
+</div>
+
 </body>
 </html>
