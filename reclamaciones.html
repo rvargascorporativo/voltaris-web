@@ -1,63 +1,24 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Libro de reclamaciones - Griden</title>
-  <style>
-    body { font-family: Arial; background:#f5f7fa; margin:0; }
-    .container { max-width:900px; margin:auto; padding:60px 20px; }
-    h1 { font-size:34px; }
-    p { line-height:1.7; color:#444; }
-    form {
-      margin-top:30px;
-      background:#fff;
-      padding:30px;
-      border-radius:10px;
-    }
-    input, textarea {
-      width:100%;
-      padding:10px;
-      margin-top:10px;
-      margin-bottom:15px;
-      border-radius:6px;
-      border:1px solid #ccc;
-    }
-    button {
-      background:#0a2540;
-      color:white;
-      padding:12px 20px;
-      border:none;
-      border-radius:6px;
-      cursor:pointer;
-    }
-  </style>
-</head>
-<body>
-
-<div class="container">
-
-<h1>Libro de reclamaciones</h1>
-
-<p>
-Si tienes alguna queja, reclamo o sugerencia, puedes registrarla a través de este formulario.
-Tu solicitud será atendida en el menor tiempo posible.
-</p>
-
-<form>
+<form action="https://formsubmit.co/griden.energia@gmail.com" method="POST">
   <label>Nombre completo</label>
-  <input type="text" required>
+  <input type="text" name="nombre" required>
 
   <label>Correo electrónico</label>
-  <input type="email" required>
+  <input type="email" name="correo" required>
 
-  <label>Detalle de la reclamación</label>
-  <textarea rows="5" required></textarea>
+  <label>Tipo</label>
+  <select name="tipo" required>
+    <option value="">Seleccione una opción</option>
+    <option value="Queja">Queja</option>
+    <option value="Reclamo">Reclamo</option>
+    <option value="Sugerencia">Sugerencia</option>
+  </select>
+
+  <label>Detalle</label>
+  <textarea name="mensaje" rows="6" required></textarea>
+
+  <input type="hidden" name="_subject" value="Nuevo registro - Libro de reclamaciones Griden">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://gridenbolivia.com/gracias.html">
 
   <button type="submit">Enviar</button>
 </form>
-
-</div>
-
-</body>
-</html>
