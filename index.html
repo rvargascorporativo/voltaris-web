@@ -830,14 +830,38 @@
 }
 
 @media (max-width: 768px) {
-  .hero-bg-video {
-    display: none;
-  }
-
   .hero-video {
-    background: url('img/hero.jpg') center/cover no-repeat;
     min-height: 85vh;
   }
+
+  .hero-bg-video {
+    display: block;
+  }
+}
+   @media (max-width: 768px) {
+  .hero-content {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+
+  .hero-content h2 {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buttons a {
+    text-align: center;
+  }
+}
 }   
     @media (max-width: 860px) {
       .hero-grid,
