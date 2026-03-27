@@ -218,18 +218,18 @@
       transform: translateY(-2px);
     }
 
-    .btn-whatsapp {
+   .btn-whatsapp {
   background: #22c55e;
-  box-shadow: 0 10px 25px rgba(34,197,94,0.3);
+  color: white;
 }
     .trust {
-      margin-top: 28px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      font-size: 14px;
-      color: var(--muted);
-    }
+  margin-top: 20px;
+  margin-bottom: 14px;
+  display: block;
+  font-size: 14px;
+  color: white;
+  opacity: 0.9;
+}
 
     .hero-visual img {
       width: 100%;
@@ -814,8 +814,8 @@
   color: white;
   padding-top: 140px;
   padding-bottom: 80px;
+  max-width: 680px;
 }
-
 .hero-content h2,
 .hero-content p,
 .hero-content .pill,
@@ -913,6 +913,22 @@
         font-size: 17px;
       }
     }
+   .fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.fade-up.delay {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   </style>
 </head>
 <body>
@@ -975,23 +991,20 @@
 
   <div class="container hero-content">
 
-    <div class="pill">Soluciones en energía y electromovilidad</div>
-<div class="trust">
-  • Ingeniería especializada • Equipos importados • Atención en Bolivia
+   <div class="pill fade-up">Soluciones en energía y electromovilidad</div>
+
+<h2 class="fade-up delay">
+  Reduce tus costos eléctricos<br>
+  <strong>y moderniza tu energía con soluciones inteligentes</strong>
+</h2>
+
+<p class="fade-up delay">
+  En Griden importamos, diseñamos e implementamos soluciones...
+</p>
+
+<div class="buttons fade-up delay">
+  ...
 </div>
-    <h2>Reduce tus costos eléctricos<br>
-     <strong>y moderniza tu energía con soluciones inteligentes</strong>
-    </h2>
-
-    <p>
-      En Griden importamos, diseñamos e implementamos soluciones en energía solar,
-      electromovilidad y sistemas eléctricos para hogares, empresas e industrias en Bolivia.
-    </p>
-
-    <div class="buttons">
-      <a class="btn-primary" href="#catalogo">Ver productos</a>
-      <a class="btn-whatsapp" href="https://wa.me/59169969051" target="_blank">Cotiza ahora</a>
-    </div>
 
   </div>
 
