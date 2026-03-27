@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moto eléctrica | Griden</title>
+  <title>Electromovilidad | Griden</title>
   <style>
     :root{
       --primary:#0f172a;
@@ -84,35 +84,54 @@
       padding: 48px 0 60px;
     }
 
-    .product-grid {
+    .section-head {
+      margin-bottom: 28px;
+    }
+
+    .section-head .tag {
+      margin-bottom: 14px;
+    }
+
+    .section-head h2 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 820px;
+    }
+
+    .products-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 38px;
+      gap: 28px;
       align-items: start;
     }
 
-    .main-image {
-      width: 100%;
+    .product-card {
+      border: 1px solid var(--border);
       border-radius: 24px;
-      border: 1px solid var(--border);
-      display: block;
-      margin-bottom: 16px;
-      object-fit: cover;
-      max-height: 480px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.05);
     }
 
-    .thumb-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+    .product-media {
+      background: #000;
     }
 
-    .thumb-grid img {
+    .product-media video {
       width: 100%;
-      height: 120px;
+      height: 340px;
       object-fit: cover;
-      border-radius: 16px;
-      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .product-info {
+      padding: 24px;
     }
 
     .tag {
@@ -126,10 +145,10 @@
       margin-bottom: 18px;
     }
 
-    .product-info h2 {
-      font-size: 42px;
+    .product-info h3 {
+      font-size: 34px;
       line-height: 1.1;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .price {
@@ -153,9 +172,10 @@
       margin: 22px 0;
     }
 
-    .specs h3 {
+    .specs h4 {
       margin-bottom: 12px;
       font-size: 20px;
+      color: var(--primary);
     }
 
     .specs ul {
@@ -193,16 +213,25 @@
     }
 
     @media (max-width: 860px) {
-      .product-grid {
-        grid-template-columns: 1fr;
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .product-info h2 {
+      .section-head h2 {
         font-size: 34px;
       }
 
-      .thumb-grid {
-        grid-template-columns: 1fr 1fr 1fr;
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-info h3 {
+        font-size: 30px;
+      }
+
+      .product-media video {
+        height: 260px;
       }
     }
   </style>
@@ -223,51 +252,88 @@
   </header>
 
   <section class="product-page">
-    <div class="container product-grid">
-      <div>
-        <img class="main-image" src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200&auto=format&fit=crop" alt="Moto eléctrica">
-
-        <div class="thumb-grid">
-          <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200&auto=format&fit=crop" alt="Moto eléctrica urbana">
-          <img src="https://images.unsplash.com/photo-1529429611270-7f3f5a5d6f2f?q=80&w=1200&auto=format&fit=crop" alt="Motocicleta eléctrica moderna">
-          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?q=80&w=1200&auto=format&fit=crop" alt="Electromovilidad en ciudad">
-        </div>
+    <div class="container">
+      <div class="section-head">
+        <div class="tag">Electromovilidad</div>
+        <h2>Movilidad eléctrica para ciudad y trabajo</h2>
+        <p>
+          En Griden ofrecemos soluciones de electromovilidad orientadas a desplazamientos urbanos,
+          reparto, transporte personal y alternativas de movilidad con menor costo operativo.
+        </p>
       </div>
 
-      <div class="product-info">
-        <div class="tag">Electromovilidad</div>
-        <h2>Moto eléctrica</h2>
-        <div class="price">Disponible bajo consulta</div>
+      <div class="products-grid">
+        <!-- MOTO ELÉCTRICA -->
+        <article class="product-card">
+          <div class="product-media">
+            <video controls playsinline preload="metadata">
+              <source src="video/trimoto.mp4" type="video/mp4">
+              Tu navegador no soporta video HTML5.
+            </video>
+          </div>
 
-        <p>
-          Solución de movilidad eléctrica orientada a desplazamientos urbanos y operaciones de reparto,
-          con funcionamiento silencioso, menor costo operativo y enfoque en eficiencia energética.
-        </p>
+          <div class="product-info">
+            <div class="tag">Electromovilidad</div>
+            <h3>Moto eléctrica</h3>
+            <div class="price">Disponible bajo consulta</div>
 
-        <div class="specs">
-          <h3>Descripción del producto</h3>
-          <ul>
-            <li>Alternativa moderna para transporte personal o uso comercial.</li>
-            <li>Bajo consumo energético frente a vehículos convencionales.</li>
-            <li>Mantenimiento reducido y operación práctica en ciudad.</li>
-            <li>Disponibilidad según modelo, autonomía y capacidad de batería.</li>
-          </ul>
-        </div>
+            <p>
+              Solución de movilidad eléctrica orientada a desplazamientos urbanos,
+              operaciones de reparto y uso práctico en ciudad.
+            </p>
 
-        <div class="specs">
-          <h3>Aplicaciones</h3>
-          <ul>
-            <li>Movilidad urbana diaria.</li>
-            <li>Reparto y logística de corta distancia.</li>
-            <li>Uso corporativo o empresarial.</li>
-            <li>Alternativa eficiente para usuarios que buscan reducir costos de combustible.</li>
-          </ul>
-        </div>
+            <div class="specs">
+              <h4>Descripción del producto</h4>
+              <ul>
+                <li>Alternativa moderna para transporte personal o comercial.</li>
+                <li>Bajo costo operativo frente a vehículos convencionales.</li>
+                <li>Funcionamiento silencioso y mantenimiento reducido.</li>
+                <li>Disponibilidad según modelo, autonomía y capacidad de batería.</li>
+              </ul>
+            </div>
 
-        <div class="cta-row">
-          <a class="btn btn-wa" href="https://wa.me/59169969051?text=Hola,%20quiero%20cotizar%20una%20moto%20eléctrica" target="_blank">Cotiza ahora</a>
-          <a class="btn btn-primary" href="index.html#contacto">Solicitar información</a>
-        </div>
+            <div class="cta-row">
+              <a class="btn btn-wa" href="https://wa.me/59169969051?text=Hola,%20quiero%20cotizar%20una%20moto%20eléctrica" target="_blank">Cotiza ahora</a>
+              <a class="btn btn-primary" href="index.html#contacto">Solicitar información</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- BICICLETA ELÉCTRICA -->
+        <article class="product-card">
+          <div class="product-media">
+            <video controls playsinline preload="metadata">
+              <source src="video/bicicleta.mp4" type="video/mp4">
+              Tu navegador no soporta video HTML5.
+            </video>
+          </div>
+
+          <div class="product-info">
+            <div class="tag">Electromovilidad</div>
+            <h3>Bicicleta eléctrica</h3>
+            <div class="price">Disponible bajo consulta</div>
+
+            <p>
+              Alternativa eficiente y práctica para movilidad personal,
+              trayectos urbanos y desplazamientos con asistencia eléctrica.
+            </p>
+
+            <div class="specs">
+              <h4>Descripción del producto</h4>
+              <ul>
+                <li>Ideal para trayectos urbanos y uso diario.</li>
+                <li>Menor esfuerzo de conducción gracias a la asistencia eléctrica.</li>
+                <li>Alternativa funcional para movilidad sostenible.</li>
+                <li>Disponibilidad según modelo, batería y autonomía.</li>
+              </ul>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn btn-wa" href="https://wa.me/59169969051?text=Hola,%20quiero%20cotizar%20una%20bicicleta%20eléctrica" target="_blank">Cotiza ahora</a>
+              <a class="btn btn-primary" href="index.html#contacto">Solicitar información</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
