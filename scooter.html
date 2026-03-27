@@ -132,12 +132,31 @@
       margin-bottom: 14px;
     }
 
-    .price {
-      font-size: 30px;
-      color: var(--success);
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
+   .price {
+  font-size: 30px;
+  color: var(--success);
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.price .iva {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.price-note {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 600;
+}
 
     .product-info p {
       color: var(--muted);
@@ -238,12 +257,18 @@
 <h2>Scooter eléctrico</h2>
 
 <div class="price">
-  Bs3.360 
+  <span class="amount">Bs3.360</span>
   <span class="iva">(s/IVA)</span>
 </div>
+
 <div class="price-note">
   5% de descuento por compra en línea
 </div>
+      .price .amount {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--success);
+}
       
         <p>
           Solución de movilidad eléctrica para desplazamientos urbanos,
