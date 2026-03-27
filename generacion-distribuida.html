@@ -13,196 +13,451 @@
       --border:#e2e8f0;
       --bg-soft:#f8fafc;
       --success:#16a34a;
+      --white:#ffffff;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
 
-    body {
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
       font-family: Arial, Helvetica, sans-serif;
-      background: #fff;
-      color: var(--primary);
-      line-height: 1.6;
+      background:#fff;
+      color:var(--primary);
+      line-height:1.6;
     }
 
-    .container {
-      width: 92%;
-      max-width: 1180px;
-      margin: 0 auto;
+    img{
+      max-width:100%;
+      display:block;
     }
 
-    header {
-      border-bottom: 1px solid var(--border);
-      background: #fff;
-      padding: 18px 0;
+    .container{
+      width:92%;
+      max-width:1180px;
+      margin:0 auto;
     }
 
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+    header{
+      border-bottom:1px solid var(--border);
+      background:#fff;
+      padding:18px 0;
+      position:sticky;
+      top:0;
+      z-index:20;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: inherit;
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
     }
 
-    .brand img {
-      width: 52px;
-      height: 52px;
-      object-fit: contain;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      padding: 4px;
-      background: #fff;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+      color:inherit;
     }
 
-    .brand h1 {
-      font-size: 24px;
-      color: var(--accent);
+    .brand img{
+      width:52px;
+      height:52px;
+      object-fit:contain;
+      border-radius:14px;
+      border:1px solid var(--border);
+      padding:4px;
+      background:#fff;
     }
 
-    .brand span {
-      display: block;
-      font-size: 11px;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    .brand h1{
+      font-size:24px;
+      color:var(--accent);
+      line-height:1.1;
     }
 
-    .back-link {
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 700;
+    .brand span{
+      display:block;
+      font-size:11px;
+      color:#64748b;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      margin-top:3px;
     }
 
-    .product-page {
-      padding: 48px 0 60px;
+    .back-link{
+      text-decoration:none;
+      color:var(--accent);
+      font-weight:700;
+      font-size:15px;
+      transition:opacity .2s ease;
     }
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 38px;
-      align-items: start;
+    .back-link:hover{
+      opacity:.8;
     }
 
-    .main-image {
-      width: 100%;
-      border-radius: 24px;
-      border: 1px solid var(--border);
-      display: block;
-      margin-bottom: 16px;
-      object-fit: cover;
-      max-height: 480px;
+    .hero{
+      padding:54px 0 26px;
+      background:linear-gradient(to bottom, #ffffff 0%, #f8fbff 100%);
     }
 
-    .thumb-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr 0.95fr;
+      gap:42px;
+      align-items:center;
     }
 
-    .thumb-grid img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 16px;
-      border: 1px solid var(--border);
+    .eyebrow{
+      display:inline-block;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:var(--accent);
+      background:var(--accent-soft);
+      padding:8px 14px;
+      border-radius:999px;
+      margin-bottom:20px;
     }
 
-    .tag {
-      display: inline-block;
-      background: var(--accent-soft);
-      color: var(--accent);
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 18px;
+    .hero h2{
+      font-size:50px;
+      line-height:1.08;
+      margin-bottom:18px;
+      max-width:700px;
     }
 
-    .product-info h2 {
-      font-size: 42px;
-      line-height: 1.1;
-      margin-bottom: 14px;
+    .hero p{
+      font-size:18px;
+      color:var(--muted);
+      max-width:640px;
+      margin-bottom:28px;
     }
 
-    .price {
-      font-size: 30px;
-      color: var(--success);
-      font-weight: 700;
-      margin-bottom: 18px;
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
     }
 
-    .product-info p {
-      color: var(--muted);
-      font-size: 17px;
-      margin-bottom: 18px;
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      padding:14px 22px;
+      border-radius:14px;
+      font-weight:700;
+      font-size:15px;
+      transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+      border:1px solid transparent;
     }
 
-    .specs {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 22px;
-      margin: 22px 0;
+    .btn:hover{
+      transform:translateY(-1px);
     }
 
-    .specs h3 {
-      margin-bottom: 12px;
-      font-size: 20px;
+    .btn-primary{
+      background:var(--primary);
+      color:#fff;
+      box-shadow:0 10px 24px rgba(15, 23, 42, 0.12);
     }
 
-    .specs ul {
-      padding-left: 18px;
-      color: var(--muted);
+    .btn-secondary{
+      background:#fff;
+      color:var(--primary);
+      border-color:var(--border);
     }
 
-    .specs li {
-      margin-bottom: 8px;
+    .hero-visual{
+      position:relative;
     }
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
+    .hero-visual img{
+      width:100%;
+      height:490px;
+      object-fit:cover;
+      border-radius:28px;
+      border:1px solid var(--border);
+      box-shadow:0 22px 48px rgba(15, 23, 42, 0.10);
+      filter:brightness(0.94);
     }
 
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 14px;
-      font-weight: 700;
+    .hero-card{
+      position:absolute;
+      left:22px;
+      bottom:22px;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(10px);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:16px 18px;
+      max-width:280px;
+      box-shadow:0 14px 32px rgba(15, 23, 42, 0.12);
     }
 
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
+    .hero-card strong{
+      display:block;
+      font-size:20px;
+      margin-bottom:4px;
+      color:var(--primary);
     }
 
-    .btn-wa {
-      background: #16a34a;
-      color: #fff;
+    .hero-card span{
+      display:block;
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.5;
     }
 
-    @media (max-width: 860px) {
-      .product-grid {
-        grid-template-columns: 1fr;
+    .page-section{
+      padding:38px 0 70px;
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:42px;
+      align-items:start;
+    }
+
+    .gallery{
+      position:sticky;
+      top:105px;
+    }
+
+    .main-image{
+      width:100%;
+      border-radius:24px;
+      border:1px solid var(--border);
+      object-fit:cover;
+      height:480px;
+      margin-bottom:16px;
+      box-shadow:0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .thumb-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:12px;
+    }
+
+    .thumb-grid img{
+      width:100%;
+      height:126px;
+      object-fit:cover;
+      border-radius:16px;
+      border:1px solid var(--border);
+      box-shadow:0 10px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .tag{
+      display:inline-block;
+      background:var(--accent-soft);
+      color:var(--accent);
+      border-radius:999px;
+      padding:8px 14px;
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .product-info h3{
+      font-size:42px;
+      line-height:1.1;
+      margin-bottom:14px;
+    }
+
+    .status-line{
+      font-size:28px;
+      color:var(--success);
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .lead{
+      color:var(--muted);
+      font-size:17px;
+      margin-bottom:18px;
+    }
+
+    .specs{
+      background:var(--bg-soft);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:22px;
+      margin:22px 0;
+    }
+
+    .specs h4{
+      margin-bottom:12px;
+      font-size:20px;
+      color:var(--primary);
+    }
+
+    .specs ul{
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    .specs li{
+      margin-bottom:9px;
+    }
+
+    .highlight-box{
+      margin-top:10px;
+      background:linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:22px;
+    }
+
+    .highlight-box h4{
+      font-size:20px;
+      margin-bottom:10px;
+    }
+
+    .highlight-box p{
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+
+    .btn-wa{
+      background:#16a34a;
+      color:#fff;
+      box-shadow:0 10px 24px rgba(22, 163, 74, 0.18);
+    }
+
+    .info-strip{
+      margin-top:44px;
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+    }
+
+    .info-item{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:22px;
+      box-shadow:0 12px 30px rgba(15, 23, 42, 0.05);
+    }
+
+    .info-item h5{
+      font-size:18px;
+      margin-bottom:8px;
+    }
+
+    .info-item p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    footer{
+      border-top:1px solid var(--border);
+      padding:24px 0 36px;
+      color:#64748b;
+      font-size:14px;
+      background:#fff;
+    }
+
+    @media (max-width: 1024px){
+      .hero-grid,
+      .product-grid,
+      .info-strip{
+        grid-template-columns:1fr;
       }
 
-      .product-info h2 {
-        font-size: 34px;
+      .gallery{
+        position:static;
       }
 
-      .thumb-grid {
-        grid-template-columns: 1fr 1fr 1fr;
+      .hero h2{
+        font-size:42px;
+      }
+
+      .main-image{
+        height:420px;
+      }
+    }
+
+    @media (max-width: 860px){
+      header{
+        position:static;
+      }
+
+      .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .hero{
+        padding:40px 0 18px;
+      }
+
+      .hero h2{
+        font-size:34px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .hero-visual img{
+        height:320px;
+        border-radius:22px;
+      }
+
+      .hero-card{
+        position:static;
+        margin-top:14px;
+        max-width:100%;
+      }
+
+      .product-info h3{
+        font-size:32px;
+      }
+
+      .status-line{
+        font-size:22px;
+      }
+
+      .main-image{
+        height:300px;
+      }
+
+      .thumb-grid{
+        grid-template-columns:1fr 1fr 1fr;
+      }
+
+      .thumb-grid img{
+        height:92px;
+      }
+
+      .cta-row,
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .btn{
+        width:100%;
       }
     }
   </style>
@@ -222,48 +477,81 @@
     </div>
   </header>
 
-  <section class="product-page">
-    <div class="container product-grid">
+  <section class="hero">
+    <div class="container hero-grid">
       <div>
-        <img class="main-image" src="img/generacion-distribuida-1.jpg" alt="Sistema de generación distribuida">
+        <span class="eyebrow">Generación distribuida</span>
+        <h2>Soluciones solares on-grid para reducir costos energéticos.</h2>
+        <p>
+          En Griden desarrollamos soluciones de generación distribuida orientadas al autoconsumo,
+          optimización de energía y evaluación técnica para clientes residenciales, comerciales e industriales.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/59169969051?text=Hola,%20quiero%20cotizar%20un%20sistema%20de%20generaci%C3%B3n%20distribuida" target="_blank">Cotiza ahora</a>
+          <a class="btn btn-secondary" href="index.html#contacto">Solicitar información</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="https://pixabay.com/images/download/x-1476224_1920.jpg" alt="Sistema solar de generación distribuida">
+        <div class="hero-card">
+          <strong>Diseño técnico</strong>
+          <span>Evaluación preliminar, análisis energético y soluciones adaptadas al perfil de consumo.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container product-grid">
+      <div class="gallery">
+        <img class="main-image" src="https://pixabay.com/images/download/x-1476224_1920.jpg" alt="Sistema de generación distribuida">
 
         <div class="thumb-grid">
-          <img src="img/generacion-distribuida-2.jpg" alt="Paneles solares en techo">
-          <img src="img/generacion-distribuida-3.jpg" alt="Instalación fotovoltaica on-grid">
-          <img src="img/generacion-distribuida-4.jpg" alt="Sistema solar para autoconsumo">
+          <img src="https://pixabay.com/images/download/x-62560_1920.jpg" alt="Paneles solares en techo">
+          <img src="https://pixabay.com/images/download/x-8244680_1920.jpg" alt="Instalación fotovoltaica on-grid">
+          <img src="https://pixabay.com/images/download/x-2666106_1920.jpg" alt="Sistema solar para autoconsumo">
         </div>
       </div>
 
       <div class="product-info">
-        <div class="tag">Generación distribuida</div>
-        <h2>Sistemas solares on-grid</h2>
-        <div class="price">Solución bajo evaluación técnica</div>
+        <div class="tag">Servicio técnico especializado</div>
+        <h3>Sistemas solares on-grid</h3>
+        <div class="status-line">Solución bajo evaluación técnica</div>
 
-        <p>
-          Diseñamos e implementamos soluciones de generación distribuida para usuarios residenciales,
-          comerciales e industriales que buscan reducir su consumo de energía de la red y mejorar
-          su eficiencia energética.
+        <p class="lead">
+          Diseñamos e implementamos soluciones de generación distribuida para usuarios que buscan
+          reducir su dependencia de la red, mejorar su eficiencia energética y avanzar hacia un consumo más inteligente.
         </p>
 
         <div class="specs">
-          <h3>Descripción del servicio</h3>
+          <h4>Descripción del servicio</h4>
           <ul>
-            <li>Evaluación técnica según perfil de consumo y tipo de instalación.</li>
-            <li>Diseño de sistemas fotovoltaicos on-grid para autoconsumo.</li>
-            <li>Análisis preliminar de capacidad, ahorro y factibilidad.</li>
-            <li>Soluciones adaptadas a pequeña, mediana o gran demanda.</li>
-            <li>Asesoramiento técnico y comercial según requerimiento del cliente.</li>
+            <li>Evaluación técnica según tipo de usuario, demanda y perfil de consumo.</li>
+            <li>Diseño de sistemas fotovoltaicos on-grid orientados al autoconsumo.</li>
+            <li>Análisis preliminar de capacidad instalada, ahorro y factibilidad.</li>
+            <li>Enfoque adaptable para pequeña, mediana o gran demanda.</li>
+            <li>Asesoramiento técnico y comercial de acuerdo con cada proyecto.</li>
           </ul>
         </div>
 
         <div class="specs">
-          <h3>Aplicaciones</h3>
+          <h4>Aplicaciones</h4>
           <ul>
             <li>Viviendas y edificios residenciales.</li>
-            <li>Comercios, oficinas y pequeños negocios.</li>
-            <li>Industrias e instalaciones con demanda diurna.</li>
-            <li>Proyectos que buscan reducir costos energéticos y mejorar sostenibilidad.</li>
+            <li>Comercios, oficinas y pequeñas empresas.</li>
+            <li>Instalaciones industriales con consumo diurno significativo.</li>
+            <li>Proyectos que buscan reducción de costos energéticos y mejor sostenibilidad.</li>
           </ul>
+        </div>
+
+        <div class="highlight-box">
+          <h4>¿Qué evaluamos en una propuesta?</h4>
+          <p>
+            Analizamos el perfil de consumo, el espacio disponible, la orientación del sistema, el tipo de conexión,
+            la demanda del cliente y la conveniencia técnica de implementar una solución de generación distribuida.
+          </p>
         </div>
 
         <div class="cta-row">
@@ -272,6 +560,31 @@
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <div class="info-strip">
+        <div class="info-item">
+          <h5>Autoconsumo</h5>
+          <p>Soluciones orientadas a reducir el consumo de energía proveniente de la red eléctrica.</p>
+        </div>
+
+        <div class="info-item">
+          <h5>Evaluación técnica</h5>
+          <p>Análisis preliminar de capacidad, configuración del sistema y factibilidad de implementación.</p>
+        </div>
+
+        <div class="info-item">
+          <h5>Enfoque escalable</h5>
+          <p>Propuestas adaptables según el tamaño de la demanda y el crecimiento futuro del cliente.</p>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <footer>
+    <div class="container">
+      © 2026 Griden Energía y Tecnología. Soluciones en energía, tecnología e ingeniería aplicada.
+    </div>
+  </footer>
 </body>
 </html>
