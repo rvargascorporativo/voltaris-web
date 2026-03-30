@@ -1276,10 +1276,13 @@
 
         <div class="form-card">
           <h4>Solicitar información</h4>
-          <form action="https://formspree.io/f/xxxxxxxx" method="POST">
+          <form action="https://formspree.io/f/mnjopebl" method="POST">
             <input type="text" name="nombre" placeholder="Nombre" required />
             <input type="email" name="email" placeholder="Correo electrónico" required />
             <input type="text" name="asunto" placeholder="Asunto" required />
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde Griden">
+<input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://www.gridenbolivia.com/gracias.html">
             <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto o producto de interés" required></textarea>
             <button type="submit">Enviar mensaje</button>
           </form>
