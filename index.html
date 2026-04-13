@@ -816,6 +816,41 @@
       }
     }
 
+    /* SECCIÓN ESTADÍSTICAS */
+    .stats-section {
+      background: #f1f5f9;
+      padding: 70px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat-box {
+      padding: 20px 30px;
+      border-right: 1px solid #e2e8f0;
+    }
+
+    .stat-box:last-child {
+      border-right: none;
+    }
+
+    .counter {
+      font-size: 80px;
+      color: var(--accent);
+      margin-bottom: 12px;
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .stat-box p {
+      font-size: 18px;
+      color: #0f172a;
+      line-height: 1.5;
+    }
+
     @media (max-width: 1024px) {
       .catalogo {
         grid-template-columns: repeat(2, 1fr);
@@ -828,6 +863,19 @@
 
       .hero-content h2 {
         font-size: 50px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .stat-box {
+        border-right: none;
+      }
+
+      .counter {
+        font-size: 64px;
       }
     }
 
@@ -908,6 +956,20 @@
         font-size: 14px;
         line-height: 1.6;
       }
+
+      .counter {
+        font-size: 54px;
+      }
+
+      .stat-box p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -986,6 +1048,30 @@
       <div class="buttons fade-up delay">
         <a class="btn-primary" href="#catalogo">Ver productos</a>
         <a class="btn-whatsapp" href="https://wa.me/59169969051" target="_blank">Cotiza ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-box">
+        <h2 class="counter" data-target="50000" data-format="k">0</h2>
+        <p>Empleos generados al mes a través de plataformas digitales como Yango</p>
+      </div>
+
+      <div class="stat-box">
+        <h2 class="counter" data-target="6">0</h2>
+        <p>Startup boliviana adquirida por multinacional (Netcomidas → PedidosYa)</p>
+      </div>
+
+      <div class="stat-box">
+        <h2 class="counter" data-target="15" data-format="plus">0</h2>
+        <p>De experiencia liderando proyectos tecnológicos y sociales</p>
+      </div>
+
+      <div class="stat-box">
+        <h2 class="counter" data-target="100000" data-format="k">0</h2>
+        <p>Usuarios conectados en Bolivia mediante sus soluciones digitales</p>
       </div>
     </div>
   </section>
@@ -1076,8 +1162,6 @@
       </div>
 
       <div class="catalogo">
-        
-
         <div class="producto">
           <a href="generacion-distribuida.html" class="producto-link">
             <img src="https://bepebblex.com/wp-content/uploads/2024/05/inversores-paneles-solares.jpg" alt="Generación distribuida">
@@ -1111,7 +1195,7 @@
             </div>
           </a>
         </div>
-     
+
         <div class="producto">
           <a href="equipos-industriales.html" class="producto-link">
             <img src="https://ptgy.ru/upload/iblock/76e/v4yeoil7l3w79m1hc3po4sb86fcm10vb.png" alt="Equipos industriales">
@@ -1124,8 +1208,6 @@
           </a>
         </div>
 
-        
-
         <div class="producto">
           <a href="automatizacion.html" class="producto-link">
             <img src="https://es.kexunelectric.com/upload/8230/20250421170702184877.webp" alt="Sistemas de automatización">
@@ -1136,7 +1218,7 @@
             </div>
           </a>
         </div>
-        
+
         <div class="producto">
           <a href="scooter.html" class="producto-link">
             <img src="https://blog.movistar.com.co/wp-content/uploads/2024/05/scooter-electrico.webp" alt="Scooter eléctrico">
@@ -1160,7 +1242,7 @@
             </div>
           </a>
         </div>
-        
+
         <div class="producto">
           <a href="cargador-electrico.html" class="producto-link">
             <img src="https://blog.guarconsa.com/wp-content/uploads/2022/05/Diseno-sin-titulo-1-1024x696.jpg" alt="Cargador eléctrico">
@@ -1281,7 +1363,7 @@
             <input type="email" name="email" placeholder="Correo electrónico" required />
             <input type="text" name="asunto" placeholder="Asunto" required />
             <input type="hidden" name="_subject" value="Nuevo mensaje desde Griden">
-<input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://www.gridenbolivia.com/gracias.html">
             <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto o producto de interés" required></textarea>
             <button type="submit">Enviar mensaje</button>
@@ -1338,16 +1420,16 @@
           </div>
         </div>
 
-      <div class="footer-col">
-  <h4>Información</h4>
-  <a href="conoce.html">Conoce Griden</a>
-  <a href="impacto-social.html">Impacto social</a>
-  <a href="trabaja.html">Trabaja con nosotros</a>
-  <a href="terminos.html">Términos y condiciones</a>
-  <a href="privacidad.html">Política de privacidad</a>
-  <a href="cookies.html">Política de cookies</a>
-  <a href="reclamaciones.html">Libro de reclamaciones</a>
-</div>
+        <div class="footer-col">
+          <h4>Información</h4>
+          <a href="conoce.html">Conoce Griden</a>
+          <a href="impacto-social.html">Impacto social</a>
+          <a href="trabaja.html">Trabaja con nosotros</a>
+          <a href="terminos.html">Términos y condiciones</a>
+          <a href="privacidad.html">Política de privacidad</a>
+          <a href="cookies.html">Política de cookies</a>
+          <a href="reclamaciones.html">Libro de reclamaciones</a>
+        </div>
       </div>
 
       <div class="footer-bottom-line"></div>
@@ -1516,6 +1598,54 @@
         logoutLink.style.display = "none";
         mobileLogoutLink.style.display = "none";
       }
+    });
+
+    function formatNumber(value, format) {
+      if (format === "k") {
+        return Math.round(value / 1000) + "K";
+      }
+      if (format === "plus") {
+        return "+" + Math.round(value);
+      }
+      return Math.round(value);
+    }
+
+    function animateCounter(element, duration = 2000) {
+      if (element.dataset.animated === "true") return;
+      element.dataset.animated = "true";
+
+      const target = Number(element.getAttribute("data-target"));
+      const format = element.getAttribute("data-format") || "plain";
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const current = target * easeOut;
+
+        element.textContent = formatNumber(current, format);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          element.textContent = formatNumber(target, format);
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target, 1800);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll(".counter").forEach(counter => {
+      observer.observe(counter);
     });
   </script>
 
