@@ -20,14 +20,14 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <!-- SEO + NOMBRE DE SITIO -->
-  <meta name="application-name" content="Griden">
-  <meta name="apple-mobile-web-app-title" content="Griden">
-  <meta name="title" content="Griden | Energía y Tecnología">
+  <meta name="application-name" content="GRIDEN">
+  <meta name="apple-mobile-web-app-title" content="GRIDEN">
+  <meta name="title" content="GRIDEN | Energía y Tecnología">
   <meta name="description" content="Soluciones en energía solar, electromovilidad y sistemas eléctricos en Bolivia.">
 
   <!-- Open Graph -->
-  <meta property="og:site_name" content="Griden">
-  <meta property="og:title" content="Griden | Energía y Tecnología">
+  <meta property="og:site_name" content="GRIDEN">
+  <meta property="og:title" content="GRIDEN | Energía y Tecnología">
   <meta property="og:description" content="Soluciones en energía solar, electromovilidad y sistemas eléctricos en Bolivia.">
   <meta property="og:url" content="https://www.gridenbolivia.com">
   <meta property="og:type" content="website">
@@ -37,7 +37,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Griden",
+    "name": "GRIDEN",
     "url": "https://www.gridenbolivia.com",
     "logo": "https://www.gridenbolivia.com/Griden_Logo.png"
   }
@@ -731,15 +731,32 @@
       padding: 0;
     }
 
-    .hero-bg-video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 1;
-    }
+   .hero-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  .hero-bg-video {
+    object-position: 75% center;
+  }
+}
 
+@media (max-width: 768px) {
+  .hero-bg-video {
+    object-position: 82% center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-bg-video {
+    object-position: 88% center;
+  }
+}
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -1052,33 +1069,11 @@
     </div>
   </section>
 
-  <section class="stats-section">
-    <div class="container stats-grid">
-      <div class="stat-box">
-        <h2 class="counter" data-target="50000" data-format="k">0</h2>
-        <p>Empleos generados al mes a través de plataformas digitales como Yango</p>
-      </div>
-
-      <div class="stat-box">
-        <h2 class="counter" data-target="6">0</h2>
-        <p>Startup boliviana adquirida por multinacional (Netcomidas → PedidosYa)</p>
-      </div>
-
-      <div class="stat-box">
-        <h2 class="counter" data-target="15" data-format="plus">0</h2>
-        <p>De experiencia liderando proyectos tecnológicos y sociales</p>
-      </div>
-
-      <div class="stat-box">
-        <h2 class="counter" data-target="100000" data-format="k">0</h2>
-        <p>Usuarios conectados en Bolivia mediante sus soluciones digitales</p>
-      </div>
-    </div>
-  </section><section class="stats-section">
+ <section class="stats-section">
   <div class="container">
     <div class="section-title">
       <small>Griden en cifras</small>
-      <h3>Resultados que reflejan capacidad técnica y crecimiento.</h3>
+      <h3>Resultados que reflejan capacidad técnica y crecimiento</h3>
       <p>
         Presentamos indicadores clave de nuestra empresa en energía, electromovilidad
         e ingeniería aplicada en Bolivia.
@@ -1086,28 +1081,58 @@
     </div>
 
     <div class="stats-grid">
+      
+            <div class="stat-box">
+        <h2 class="counter" data-target="97" data-format="plus">0</h2>
+        <p>Ventas concretadas con clientes satisfechos.</p>
+      </div>    
       <div class="stat-box">
-        <h2 class="counter" data-target="3" data-format="plus">0</h2>
-        <p>Líneas principales de negocio: ingeniería eléctrica, generación distribuida y electromovilidad.</p>
+        <h2 class="counter" data-target="86" data-format="plus">0</h2>
+        <p>Proyectos, cotizaciones, soluciones técnicas con enfoque comercial y energético y desarrollo de herramientas digitales.</p>
       </div>
 
-      <div class="stat-box">
-        <h2 class="counter" data-target="100" data-format="plus">0</h2>
-        <p>Proyectos, cotizaciones y soluciones técnicas con enfoque comercial y energético.</p>
-      </div>
-
-      <div class="stat-box">
-        <h2 class="counter" data-target="24" data-format="plus">0</h2>
+            <div class="stat-box">
+        <h2 class="counter" data-target="72" data-format="plus">0</h2>
         <p>Meses de desarrollo, consolidación de marca y presencia digital empresarial.</p>
       </div>
 
-      <div class="stat-box">
+        <div class="stat-box">
         <h2 class="counter" data-target="4" data-format="plus">0</h2>
-        <p>Áreas de enfoque: energía solar, automatización, tableros eléctricos y movilidad eléctrica.</p>
+        <p>Líneas principales de negocio: ingeniería eléctrica, generación distribuida y electromovilidad.</p>
       </div>
     </div>
   </div>
 </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <small>Ventajas</small>
+        <h3>¿Por qué elegir Griden?</h3>
+        <p>
+          Combinamos importación directa, soporte técnico y visión comercial para ofrecer
+          soluciones eléctricas y energéticas con enfoque práctico y profesional.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Importación directa</h4>
+          <p>Acceso a equipos eléctricos y tecnológicos con mejores precios y sin intermediarios innecesarios.</p>
+        </div>
+
+        <div class="service-card">
+          <h4>Soporte técnico real</h4>
+          <p>No solo vendemos productos; brindamos asesoramiento técnico especializado para una mejor decisión.</p>
+        </div>
+
+        <div class="service-card">
+          <h4>Soluciones integrales</h4>
+          <p>Desde el suministro de equipos, la implementación de sistemas energéticos, hasta el mantenimiento y soporte postventa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="servicios">
     <div class="container">
@@ -1265,7 +1290,7 @@
     <div class="container">
       <div class="section-title">
         <small>Herramienta técnica</small>
-        <h3>Evalúa tu proyecto solar con SolarRate.</h3>
+        <h3>Evalúa tu proyecto solar con SolarRate</h3>
         <p>
           SolarRate es nuestra herramienta de evaluación técnico-económica para generación distribuida fotovoltaica.
           Permite estimar el dimensionamiento del sistema, la producción energética y el ahorro económico esperado.
@@ -1319,7 +1344,7 @@
         <div>
           <div class="info-box">
             <strong>Enfoque</strong>
-            <span>Soluciones técnicas aplicables y orientadas a resultados.</span>
+            <span>Soluciones técnicas aplicables y orientadas a resultados</span>
           </div>
           <div class="info-box">
             <strong>Cobertura</strong>
@@ -1654,3 +1679,4 @@
 
 </body>
 </html>
+
