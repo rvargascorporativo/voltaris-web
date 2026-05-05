@@ -12,7 +12,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios | Griden</title>
+  <title>Griden | Energía y Tecnología</title>
 
   <!-- FAVICON -->
   <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
@@ -22,13 +22,13 @@
   <!-- SEO + NOMBRE DE SITIO -->
   <meta name="application-name" content="GRIDEN">
   <meta name="apple-mobile-web-app-title" content="GRIDEN">
-  <meta name="title" content="Servicios | Griden">
-  <meta name="description" content="Servicios de ingeniería eléctrica, generación distribuida, automatización industrial y electromovilidad en Bolivia.">
+  <meta name="title" content="Griden | Energía y Tecnología">
+  <meta name="description" content="Soluciones en energía solar, electromovilidad y sistemas eléctricos en Bolivia.">
 
   <!-- Open Graph -->
   <meta property="og:site_name" content="GRIDEN">
-  <meta property="og:title" content="Servicios | Griden">
-  <meta property="og:description" content="Servicios de ingeniería eléctrica, generación distribuida, automatización industrial y electromovilidad en Bolivia.">
+  <meta property="og:title" content="Griden | Energía y Tecnología">
+  <meta property="og:description" content="Soluciones en energía solar, electromovilidad y sistemas eléctricos en Bolivia.">
   <meta property="og:url" content="https://www.gridenbolivia.com">
   <meta property="og:type" content="website">
 
@@ -67,17 +67,7 @@
       --success:#16a34a;
       --success-dark:#15803d;
     }
-<script>
-function openMobileMenu() {
-  document.getElementById("mobileMenu").classList.add("active");
-  document.getElementById("mobileMenuOverlay").classList.add("active");
-}
 
-function closeMobileMenu() {
-  document.getElementById("mobileMenu").classList.remove("active");
-  document.getElementById("mobileMenuOverlay").classList.remove("active");
-}
-</script>
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
@@ -663,20 +653,20 @@ function closeMobileMenu() {
     .mobile-menu {
       position: fixed;
       top: 0;
-      right: -320px;
+      left: -320px;
       width: 290px;
       max-width: 85vw;
       height: 100vh;
       background: white;
       box-shadow: 0 20px 60px rgba(15, 23, 42, 0.18);
       z-index: 999;
-      transition: right 0.25s ease;
+      transition: left 0.25s ease;
       display: flex;
       flex-direction: column;
     }
 
     .mobile-menu.active {
-      right: 0;
+      left: 0;
     }
 
     .mobile-menu-overlay.active {
@@ -1003,7 +993,7 @@ function closeMobileMenu() {
         </div>
       </div>
 
-      <button class="menu-toggle" onclick="openMobileMenu()" aria-label="Abrir menú">☰</button>
+      <button id="menuToggle" class="menu-toggle" type="button" aria-label="Abrir menú">☰</button>
 
       <nav class="desktop-nav">
         <a href="/">Inicio</a>
@@ -1043,46 +1033,95 @@ function closeMobileMenu() {
     </div>
   </aside>
 
-<section id="servicios">
+<section id="inicio" class="hero-video">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata">
+      <source src="video/griden.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="pill fade-up">Soluciones en energía y electromovilidad</div>
+
+      <h2 class="fade-up delay">
+        Reduce tus costos eléctricos<br>
+        <strong>y moderniza tu energía con soluciones inteligentes</strong>
+      </h2>
+
+      <p class="fade-up delay">
+        En Griden importamos, diseñamos e implementamos soluciones en energía solar,
+        electromovilidad y sistemas eléctricos para hogares, empresas e industrias en Bolivia.
+      </p>
+
+      <div class="buttons fade-up delay">
+        <a class="btn-primary" href="/catalogo">Ver productos</a>
+        <a class="btn-whatsapp" href="https://wa.me/59169969051" target="_blank">Cotiza ahora</a>
+      </div>
+    </div>
+  </section>
+
+<section class="stats-section">
+  <div class="container">
+    <div class="section-title">
+      <small>Griden en cifras</small>
+      <h3>Resultados que reflejan capacidad técnica y crecimiento</h3>
+      <p>
+        Presentamos indicadores clave de nuestra empresa en energía, electromovilidad
+        e ingeniería aplicada en Bolivia.
+      </p>
+    </div>
+
+    <div class="stats-grid">
+      
+            <div class="stat-box">
+        <h2 class="counter" data-target="97" data-format="plus">0</h2>
+        <p>Ventas concretadas con clientes satisfechos.</p>
+      </div>    
+      <div class="stat-box">
+        <h2 class="counter" data-target="86" data-format="plus">0</h2>
+        <p>Proyectos, cotizaciones, soluciones técnicas con enfoque comercial y energético y desarrollo de herramientas digitales.</p>
+      </div>
+
+            <div class="stat-box">
+        <h2 class="counter" data-target="72" data-format="plus">0</h2>
+        <p>Meses de desarrollo, consolidación de marca y presencia digital empresarial.</p>
+      </div>
+
+        <div class="stat-box">
+        <h2 class="counter" data-target="4" data-format="plus">0</h2>
+        <p>Líneas principales de negocio: ingeniería eléctrica, generación distribuida y electromovilidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+<section>
     <div class="container">
       <div class="section-title">
-        <small>Servicios</small>
-        <h3>Soluciones técnicas orientadas a energía, industria y movilidad eléctrica.</h3>
+        <small>Ventajas</small>
+        <h3>¿Por qué elegir Griden?</h3>
         <p>
-          Desarrollamos servicios especializados para proyectos eléctricos, energéticos e industriales,
-          con enfoque en calidad técnica, eficiencia y soporte comercial.
+          Combinamos importación directa, soporte técnico y visión comercial para ofrecer
+          soluciones eléctricas y energéticas con enfoque práctico y profesional.
         </p>
       </div>
 
       <div class="services-grid">
         <div class="service-card">
-          <h4>Ingeniería eléctrica</h4>
-          <p>Diseño, cálculo, revisión y desarrollo de proyectos eléctricos para aplicaciones residenciales, comerciales e industriales.</p>
+          <h4>Importación directa</h4>
+          <p>Acceso a equipos eléctricos y tecnológicos con mejores precios y sin intermediarios innecesarios.</p>
         </div>
 
         <div class="service-card">
-          <h4>Generación distribuida</h4>
-          <p>Evaluación técnica, dimensionamiento e integración de sistemas fotovoltaicos conectados a red.</p>
+          <h4>Soporte técnico real</h4>
+          <p>No solo vendemos productos; brindamos asesoramiento técnico especializado para una mejor decisión.</p>
         </div>
 
         <div class="service-card">
-          <h4>Automatización industrial</h4>
-          <p>Tableros, instrumentación, control y soluciones para optimización operativa en procesos industriales.</p>
-        </div>
-
-        <div class="service-card">
-          <h4>Electromovilidad</h4>
-          <p>Venta, asesoramiento técnico y soluciones para scooters, motos eléctricas y equipos asociados.</p>
-        </div>
-
-        <div class="service-card">
-          <h4>Instalación y mantenimiento</h4>
-          <p>Montaje de sistemas eléctricos, mantenimiento preventivo y correctivo, soporte técnico y reparación.</p>
-        </div>
-
-        <div class="service-card">
-          <h4>Comercialización e importación</h4>
-          <p>Venta e importación de equipos eléctricos, repuestos, accesorios y soluciones energéticas.</p>
+          <h4>Soluciones integrales</h4>
+          <p>Desde el suministro de equipos, la implementación de sistemas energéticos, hasta el mantenimiento y soporte postventa.</p>
         </div>
       </div>
     </div>
@@ -1174,8 +1213,8 @@ function closeMobileMenu() {
     </div>
 
 <!-- FIREBASE COMPAT -->
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  
 
 <script>
 function openMobileMenu() {
@@ -1206,28 +1245,41 @@ function closeAuth() {
 
 function register() {
   const msg = document.getElementById("authMessage");
-  if (msg) msg.textContent = "Registro disponible desde la página principal.";
+  if (msg) {
+    msg.textContent = "Registro temporalmente no configurado en esta página.";
+    msg.style.color = "#dc2626";
+  }
 }
 
 function login() {
   const msg = document.getElementById("authMessage");
-  if (msg) msg.textContent = "Inicio de sesión disponible desde la página principal.";
+  if (msg) {
+    msg.textContent = "Inicio de sesión temporalmente no configurado en esta página.";
+    msg.style.color = "#dc2626";
+  }
 }
 
 function logout() {
-  closeAuth();
   closeMobileMenu();
 }
 
-window.addEventListener("click", function(event) {
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const overlay = document.getElementById("mobileMenuOverlay");
   const modal = document.getElementById("authModal");
-  if (event.target === modal) closeAuth();
-});
 
-window.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") {
-    closeMobileMenu();
-    closeAuth();
+  if (menuToggle) {
+    menuToggle.addEventListener("click", openMobileMenu);
+  }
+
+  if (overlay) {
+    overlay.addEventListener("click", closeMobileMenu);
+  }
+
+  if (modal) {
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) closeAuth();
+    });
   }
 });
 </script>
