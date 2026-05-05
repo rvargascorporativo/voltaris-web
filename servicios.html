@@ -67,7 +67,17 @@
       --success:#16a34a;
       --success-dark:#15803d;
     }
+<script>
+function openMobileMenu() {
+  document.getElementById("mobileMenu").classList.add("active");
+  document.getElementById("mobileMenuOverlay").classList.add("active");
+}
 
+function closeMobileMenu() {
+  document.getElementById("mobileMenu").classList.remove("active");
+  document.getElementById("mobileMenuOverlay").classList.remove("active");
+}
+</script>
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
