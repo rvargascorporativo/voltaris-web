@@ -1083,8 +1083,8 @@
       </div>
 
             <div class="stat-box">
-        <h2 class="counter" data-target="72" data-format="plus">0</h2>
-        <p>Meses de desarrollo, consolidación de marca y presencia digital empresarial.</p>
+     <h2 class="counter" id="mesesCounter" data-target="72" data-format="plus">0</h2>
+<p>Meses de desarrollo, consolidación de marca y presencia digital empresarial.</p>
       </div>
 
         <div class="stat-box">
@@ -1391,12 +1391,33 @@
       requestAnimationFrame(update);
     }
 
-    function startCounters() {
-      document.querySelectorAll(".counter").forEach(counter => {
-        animateCounter(counter, 1800);
-      });
-    }
+    function calcularMesesDesde(inicio) {
+  const hoy = new Date();
+  const fechaInicio = new Date(inicio);
 
+  let meses = (hoy.getFullYear() - fechaInicio.getFullYear()) * 12;
+  meses += hoy.getMonth() - fechaInicio.getMonth();
+
+  return meses;
+}
+
+function actualizarMesesGriden() {
+  const mesesCounter = document.getElementById("mesesCounter");
+
+  if (mesesCounter) {
+    const meses = calcularMesesDesde("2020-03-01");
+    mesesCounter.setAttribute("data-target", meses);
+  }
+}
+
+function startCounters() {
+  actualizarMesesGriden();
+
+  document.querySelectorAll(".counter").forEach(counter => {
+    animateCounter(counter, 1800);
+  });
+}
+actualizarMesesGriden();
     if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
