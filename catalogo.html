@@ -12,7 +12,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Productos | Griden</title>
+  <title>Servicios | Griden</title>
 
   <!-- FAVICON -->
   <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
@@ -22,13 +22,13 @@
   <!-- SEO + NOMBRE DE SITIO -->
   <meta name="application-name" content="GRIDEN">
   <meta name="apple-mobile-web-app-title" content="GRIDEN">
-  <meta name="title" content="Productos | Griden">
-  <meta name="description" content="Catálogo de productos y soluciones en energía solar, electromovilidad, automatización y equipos eléctricos.">
+  <meta name="title" content="Servicios | Griden">
+  <meta name="description" content="Servicios de ingeniería eléctrica, generación distribuida, automatización industrial y electromovilidad en Bolivia.">
 
   <!-- Open Graph -->
   <meta property="og:site_name" content="GRIDEN">
-  <meta property="og:title" content="Productos | Griden">
-  <meta property="og:description" content="Catálogo de productos y soluciones en energía solar, electromovilidad, automatización y equipos eléctricos.">
+  <meta property="og:title" content="Servicios | Griden">
+  <meta property="og:description" content="Servicios de ingeniería eléctrica, generación distribuida, automatización industrial y electromovilidad en Bolivia.">
   <meta property="og:url" content="https://www.gridenbolivia.com">
   <meta property="og:type" content="website">
 
@@ -67,7 +67,17 @@
       --success:#16a34a;
       --success-dark:#15803d;
     }
+<script>
+function openMobileMenu() {
+  document.getElementById("mobileMenu").classList.add("active");
+  document.getElementById("mobileMenuOverlay").classList.add("active");
+}
 
+function closeMobileMenu() {
+  document.getElementById("mobileMenu").classList.remove("active");
+  document.getElementById("mobileMenuOverlay").classList.remove("active");
+}
+</script>
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
@@ -650,20 +660,20 @@
       z-index: 998;
     }
 
-   .mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -320px;
-  width: 290px;
-  max-width: 85vw;
-  height: 100vh;
-  background: white;
-  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.18);
-  z-index: 999;
-  transition: right 0.25s ease;
-  display: flex;
-  flex-direction: column;
-}
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 290px;
+      max-width: 85vw;
+      height: 100vh;
+      background: white;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.18);
+      z-index: 999;
+      transition: right 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
 
     .mobile-menu.active {
       right: 0;
@@ -1033,108 +1043,46 @@
     </div>
   </aside>
 
-<section id="catalogo" class="catalog-section">
+<section id="servicios">
     <div class="container">
       <div class="section-title">
-        <small>Catálogo</small>
-        <h3>Productos y soluciones destacadas</h3>
+        <small>Servicios</small>
+        <h3>Soluciones técnicas orientadas a energía, industria y movilidad eléctrica.</h3>
         <p>
-          Haz clic en cada producto para ver su detalle, imágenes y opciones de cotización.
+          Desarrollamos servicios especializados para proyectos eléctricos, energéticos e industriales,
+          con enfoque en calidad técnica, eficiencia y soporte comercial.
         </p>
       </div>
 
-      <div class="catalogo">
-        <div class="producto">
-          <a href="/generacion-distribuida" class="producto-link">
-            <img src="https://bepebblex.com/wp-content/uploads/2024/05/inversores-paneles-solares.jpg" alt="Generación distribuida">
-            <div class="producto-content">
-              <small>Energía solar</small>
-              <h4>Generación distribuida</h4>
-              <span class="producto-boton">Ver detalle</span>
-            </div>
-          </a>
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Ingeniería eléctrica</h4>
+          <p>Diseño, cálculo, revisión y desarrollo de proyectos eléctricos para aplicaciones residenciales, comerciales e industriales.</p>
         </div>
 
-        <div class="producto">
-          <a href="/estructuras-paneles" class="producto-link">
-            <img src="https://www.cealsa.es/assets/images/textareas/celo-clipado-portico-premontado.jpg" alt="Estructuras para paneles fotovoltaicos">
-            <div class="producto-content">
-              <small>Generación Distribuida</small>
-              <h4>Estructuras para paneles fotovoltaicos</h4>
-              <p><strong>Desde Bs899</strong></p>
-              <span class="producto-boton">Ver detalle</span>
-            </div>
-          </a>
+        <div class="service-card">
+          <h4>Generación distribuida</h4>
+          <p>Evaluación técnica, dimensionamiento e integración de sistemas fotovoltaicos conectados a red.</p>
         </div>
 
-        <div class="producto">
-          <a href="/tablero-electrico" class="producto-link">
-            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1200,h_1200/https://electricidadpractica.com/wp-content/uploads/2025/07/componentes-tablero-electrico.webp" alt="Tablero eléctrico">
-            <div class="producto-content">
-              <small>Automatización</small>
-              <h4>Tablero eléctrico</h4>
-              <span class="producto-boton">Ver detalle</span>
-            </div>
-          </a>
+        <div class="service-card">
+          <h4>Automatización industrial</h4>
+          <p>Tableros, instrumentación, control y soluciones para optimización operativa en procesos industriales.</p>
         </div>
 
-        <div class="producto">
-          <a href="/equipos-industriales" class="producto-link">
-            <img src="https://ptgy.ru/upload/iblock/76e/v4yeoil7l3w79m1hc3po4sb86fcm10vb.png" alt="Equipos industriales">
-            <div class="producto-content">
-              <small>Industria</small>
-              <h4>Equipos industriales</h4>
-              <p><strong>Desde Bs2.900</strong></p>
-              <span class="producto-boton">Ver detalle</span>
-            </div>
-          </a>
+        <div class="service-card">
+          <h4>Electromovilidad</h4>
+          <p>Venta, asesoramiento técnico y soluciones para scooters, motos eléctricas y equipos asociados.</p>
         </div>
 
-        <div class="producto">
-          <a href="/automatizacion" class="producto-link">
-            <img src="https://es.kexunelectric.com/upload/8230/20250421170702184877.webp" alt="Sistemas de automatización">
-            <div class="producto-content">
-              <small>Control y monitoreo</small>
-              <h4>Sistemas de automatización</h4>
-              <span class="producto-boton">Ver detalle</span>
-            </div>
-          </a>
+        <div class="service-card">
+          <h4>Instalación y mantenimiento</h4>
+          <p>Montaje de sistemas eléctricos, mantenimiento preventivo y correctivo, soporte técnico y reparación.</p>
         </div>
 
-        <div class="producto">
-          <a href="/scooter" class="producto-link">
-            <img src="https://blog.movistar.com.co/wp-content/uploads/2024/05/scooter-electrico.webp" alt="Scooter eléctrico">
-            <div class="producto-content">
-              <small>Electromovilidad</small>
-              <h4>Scooter eléctrico</h4>
-              <p><strong>Desde Bs2.999</strong></p>
-              <span class="producto-boton">Ver detalle</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="producto">
-          <a href="/moto-electrica" class="producto-link">
-            <img src="https://exclusivomotos.com/wp-content/uploads/2024/07/P90454047_lowRes_bmw-ce-04-riding-sho.jpg" alt="Moto eléctrica">
-            <div class="producto-content">
-              <small>Electromovilidad</small>
-              <h4>Moto eléctrica</h4>
-              <p><strong>Desde Bs6.900</strong></p>
-              <span class="producto-boton">Ver detalle</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="producto">
-          <a href="/cargador-electrico" class="producto-link">
-            <img src="https://blog.guarconsa.com/wp-content/uploads/2022/05/Diseno-sin-titulo-1-1024x696.jpg" alt="Cargador eléctrico">
-            <div class="producto-content">
-              <small>Electromovilidad</small>
-              <h4>Cargador eléctrico</h4>
-              <p><strong>Desde Bs5.900</strong></p>
-              <span class="producto-boton">Ver detalle</span>
-            </div>
-          </a>
+        <div class="service-card">
+          <h4>Comercialización e importación</h4>
+          <p>Venta e importación de equipos eléctricos, repuestos, accesorios y soluciones energéticas.</p>
         </div>
       </div>
     </div>
@@ -1224,20 +1172,64 @@
 
       <div id="authMessage"></div>
     </div>
-  </div>
+
 <!-- FIREBASE COMPAT -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
 <script>
 function openMobileMenu() {
-  document.getElementById("mobileMenu").classList.add("active");
-  document.getElementById("mobileMenuOverlay").classList.add("active");
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("mobileMenuOverlay");
+
+  if (menu) menu.classList.add("active");
+  if (overlay) overlay.classList.add("active");
 }
 
 function closeMobileMenu() {
-  document.getElementById("mobileMenu").classList.remove("active");
-  document.getElementById("mobileMenuOverlay").classList.remove("active");
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("mobileMenuOverlay");
+
+  if (menu) menu.classList.remove("active");
+  if (overlay) overlay.classList.remove("active");
 }
+
+function openAuth() {
+  const modal = document.getElementById("authModal");
+  if (modal) modal.style.display = "flex";
+}
+
+function closeAuth() {
+  const modal = document.getElementById("authModal");
+  if (modal) modal.style.display = "none";
+}
+
+function register() {
+  const msg = document.getElementById("authMessage");
+  if (msg) msg.textContent = "Registro disponible desde la página principal.";
+}
+
+function login() {
+  const msg = document.getElementById("authMessage");
+  if (msg) msg.textContent = "Inicio de sesión disponible desde la página principal.";
+}
+
+function logout() {
+  closeAuth();
+  closeMobileMenu();
+}
+
+window.addEventListener("click", function(event) {
+  const modal = document.getElementById("authModal");
+  if (event.target === modal) closeAuth();
+});
+
+window.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeMobileMenu();
+    closeAuth();
+  }
+});
 </script>
 </body>
 </html>
