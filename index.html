@@ -1212,9 +1212,218 @@
       <div id="authMessage"></div>
     </div>
 
-<!-- FIREBASE COMPAT -->
+</div>
+
+  <!-- FIREBASE COMPAT -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+  <script>
+    function openMobileMenu() {
+      document.getElementById("mobileMenu").classList.add("active");
+      document.getElementById("mobileMenuOverlay").classList.add("active");
+    }
+
+    function closeMobileMenu() {
+      document.getElementById("mobileMenu").classList.remove("active");
+      document.getElementById("mobileMenuOverlay").classList.remove("active");
+    }
+
+    function openAuth() {
+      document.getElementById("authModal").style.display = "flex";
+      clearAuthMessage();
+    }
+
+    function closeAuth() {
+      document.getElementById("authModal").style.display = "none";
+    }
+
+    window.addEventListener("click", function (event) {
+      const modal = document.getElementById("authModal");
+      if (event.target === modal) {
+        closeAuth();
+      }
+    });
+
+    function showAuthMessage(message, isError = false) {
+      const box = document.getElementById("authMessage");
+      box.textContent = message;
+      box.style.color = isError ? "#dc2626" : "#16a34a";
+    }
+
+    function clearAuthMessage() {
+      document.getElementById("authMessage").textContent = "";
+    }
+
+    function clearAuthFields() {
+      document.getElementById("email").value = "";
+      document.getElementById("password").value = "";
+    }
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyD5yoe5bl_u4AD4UT2aJmA3rQk86KKVJWo",
+      authDomain: "gridenbolivia.firebaseapp.com",
+      projectId: "gridenbolivia",
+      storageBucket: "gridenbolivia.firebasestorage.app",
+      messagingSenderId: "829778703180",
+      appId: "1:829778703180:web:ca74494f370e6777dd55e9",
+      measurementId: "G-4S77MHBCQ5"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    function register() {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!email || !password) {
+        showAuthMessage("Completa correo y contraseña.", true);
+        return;
+      }
+
+      auth.createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          showAuthMessage("Usuario creado correctamente.");
+          clearAuthFields();
+          setTimeout(() => closeAuth(), 900);
+        })
+        .catch((e) => {
+          showAuthMessage("Firebase: " + e.message, true);
+        });
+    }
+
+    function login() {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!email || !password) {
+        showAuthMessage("Completa correo y contraseña.", true);
+        return;
+      }
+
+      auth.signInWithEmailAndPassword(email, password)
+        .then(() => {
+          showAuthMessage("Sesión iniciada correctamente.");
+          clearAuthFields();
+          setTimeout(() => closeAuth(), 900);
+        })
+        .catch((e) => {
+          showAuthMessage("Firebase: " + e.message, true);
+        });
+    }
+
+    function logout() {
+      auth.signOut()
+        .then(() => {
+          closeAuth();
+          closeMobileMenu();
+        })
+        .catch((e) => {
+          showAuthMessage("Firebase: " + e.message, true);
+        });
+    }
+
+    auth.onAuthStateChanged((user) => {
+      const authNavLink = document.getElementById("authNavLink");
+      const logoutLink = document.getElementById("logoutLink");
+      const mobileAuthLink = document.getElementById("mobileAuthLink");
+      const mobileLogoutLink = document.getElementById("mobileLogoutLink");
+
+      if (user) {
+        const email = user.email || "Usuario";
+        const nombreCorto = email.split("@")[0];
+        const textoUsuario = "Hola, " + nombreCorto;
+
+        authNavLink.textContent = textoUsuario;
+        mobileAuthLink.textContent = textoUsuario;
+
+        authNavLink.onclick = function () { openAuth(); };
+        mobileAuthLink.onclick = function () { openAuth(); closeMobileMenu(); };
+
+        logoutLink.style.display = "inline-block";
+        mobileLogoutLink.style.display = "block";
+      } else {
+        authNavLink.textContent = "Mi cuenta";
+        mobileAuthLink.textContent = "Mi cuenta";
+
+        authNavLink.onclick = function () { openAuth(); };
+        mobileAuthLink.onclick = function () { openAuth(); closeMobileMenu(); };
+
+        logoutLink.style.display = "none";
+        mobileLogoutLink.style.display = "none";
+      }
+    });
+
+    function formatNumber(value, format) {
+      if (format === "k") {
+        return Math.round(value / 1000) + "K";
+      }
+      if (format === "plus") {
+        return "+" + Math.round(value);
+      }
+      return Math.round(value);
+    }
+
+    function animateCounter(element, duration = 2000) {
+      if (element.dataset.animated === "true") return;
+      element.dataset.animated = "true";
+
+      const target = Number(element.getAttribute("data-target"));
+      const format = element.getAttribute("data-format") || "plain";
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const current = target * easeOut;
+
+        element.textContent = formatNumber(current, format);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          element.textContent = formatNumber(target, format);
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    function startCounters() {
+      document.querySelectorAll(".counter").forEach(counter => {
+        animateCounter(counter, 1800);
+      });
+    }
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target, 1800);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll(".counter").forEach(counter => {
+        observer.observe(counter);
+      });
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.querySelectorAll(".counter").forEach(counter => {
+            if (counter.dataset.animated !== "true") {
+              animateCounter(counter, 1800);
+            }
+          });
+        }, 800);
+      });
+    } else {
+      window.addEventListener("load", startCounters);
+    }
+  </script>
 
 </body>
 </html>
