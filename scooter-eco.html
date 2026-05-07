@@ -4,23 +4,776 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Griden Eco | Griden Bolivia</title>
-  <meta name="description" content="Griden Eco - scooter eléctrico Griden Bolivia." />
+  <meta name="description" content="Griden Eco - scooter eléctrico económico comercializado por Griden Bolivia." />
   <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}:root{--primary:#0f172a;--accent:#2563eb;--soft:#f8fafc;--border:#e2e8f0;--muted:#475569;--green:#16a34a}body{font-family:Arial,Helvetica,sans-serif;color:var(--primary);line-height:1.6;background:#fff}.container{width:92%;max-width:1200px;margin:auto}header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(10px)}.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:20px}.brand{display:flex;align-items:center;gap:14px}.brand img{width:52px;height:52px;object-fit:contain;border-radius:14px;border:1px solid var(--border);padding:4px}.brand h1{font-size:24px;color:var(--accent)}.brand span{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:2px}.desktop-nav{display:flex;align-items:center;flex-wrap:wrap}.desktop-nav a{color:#64748b;text-decoration:none;margin-left:22px;font-size:15px;font-weight:700}.desktop-nav a:hover{color:var(--accent)}.menu-toggle{display:none;border:none;background:var(--primary);color:white;font-size:24px;padding:10px 14px;border-radius:12px;cursor:pointer}.mobile-menu-overlay{position:fixed;inset:0;background:rgba(15,23,42,.45);display:none;z-index:998}.mobile-menu-overlay.active{display:block}.mobile-menu{position:fixed;top:0;right:-320px;width:290px;max-width:85vw;height:100vh;background:white;box-shadow:0 20px 60px rgba(15,23,42,.18);z-index:999;transition:right .25s ease}.mobile-menu.active{right:0}.mobile-menu-header{display:flex;justify-content:space-between;padding:22px 18px;border-bottom:1px solid var(--border);background:var(--soft)}.mobile-menu-header strong{font-size:22px;color:var(--accent)}.mobile-menu-header span{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px}.mobile-close{border:none;background:transparent;font-size:28px;color:var(--muted);cursor:pointer}.mobile-menu-links{display:flex;flex-direction:column}.mobile-menu-links a{text-decoration:none;color:var(--primary);font-weight:700;padding:14px 20px;border-bottom:1px solid #f1f5f9}.hero{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:white;padding:70px 0}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.pill{display:inline-block;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);font-weight:700;font-size:14px;margin-bottom:20px}.hero h2{font-size:54px;line-height:1.08;margin-bottom:18px}.hero p{font-size:18px;color:#e2e8f0}.hero-img{width:100%;height:430px;object-fit:cover;border-radius:30px;background:#eef2f7;box-shadow:0 20px 70px rgba(0,0,0,.3)}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.btn{display:inline-block;text-align:center;text-decoration:none;border:none;border-radius:14px;padding:14px 18px;font-weight:900;cursor:pointer}.btn-primary{background:white;color:var(--primary)}.btn-wa{background:#22c55e;color:white}.btn-soft{background:#dbeafe;color:var(--accent)}.btn-heart{background:#fff;border:1px solid #e2e8f0;color:#dc2626}section{padding:72px 0}.section-title small{font-size:12px;text-transform:uppercase;letter-spacing:3px;color:var(--accent);font-weight:900}.section-title h3{font-size:38px;margin:12px 0}.section-title p{color:var(--muted);font-size:17px;max-width:780px}.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}.spec-card{background:white;border:1px solid var(--border);border-radius:22px;padding:22px;box-shadow:0 12px 28px rgba(15,23,42,.06)}.spec-card small{color:#64748b;font-size:12px;text-transform:uppercase;letter-spacing:1.8px;font-weight:900}.spec-card strong{display:block;font-size:24px;margin-top:8px}.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:22px;margin-top:28px}.tech{width:100%;border-collapse:collapse;min-width:620px}.tech td{padding:16px;border-bottom:1px solid var(--border)}.tech td:first-child{font-weight:900;background:var(--soft);width:35%}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.gallery img{width:100%;height:250px;object-fit:cover;border-radius:22px;border:1px solid var(--border);background:#eef2f7}.certs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}.cert{background:var(--soft);border:1px solid var(--border);border-radius:20px;padding:22px}.cert strong{display:block;font-size:20px}.note{background:#fff7ed;border:1px solid #fed7aa;border-radius:22px;padding:22px;color:#9a3412;margin-top:28px}.auth-modal{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;justify-content:center;align-items:center;padding:20px;z-index:1000}.auth-box{background:white;width:100%;max-width:390px;border-radius:24px;padding:28px;box-shadow:0 25px 60px rgba(15,23,42,.25);position:relative}.auth-box h3{font-size:28px;margin-bottom:8px}.auth-subtitle{color:var(--muted);font-size:14px;margin-bottom:20px}.auth-box input{width:100%;margin-bottom:12px;padding:14px 16px;border-radius:14px;border:1px solid var(--border);font-size:14px}.auth-box button{width:100%;padding:13px 16px;border-radius:14px;border:none;font-size:15px;font-weight:800;cursor:pointer;margin-bottom:10px}.close-auth{position:absolute!important;top:14px;right:16px;background:transparent!important;width:auto!important;font-size:24px;color:#64748b;padding:0!important}.btn-register{background:var(--accent);color:white}.btn-login{background:#e2e8f0;color:var(--primary)}#authMessage{margin-top:8px;font-size:14px;min-height:20px}.footer-links-section{background:#f8fafc;border-top:1px solid var(--border);padding:50px 0 18px}.footer-grid{display:grid;grid-template-columns:1.1fr 1fr 1.2fr 1fr;gap:34px}.footer-col h4{font-size:18px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #cbd5e1}.footer-col a{display:block;text-decoration:none;color:var(--muted);font-size:15px;margin-bottom:8px}.footer-col p{color:var(--muted);font-size:15px}footer{text-align:center;padding:34px 20px;background:var(--primary);color:#cbd5e1;font-size:14px}@media(max-width:1024px){.hero-grid{grid-template-columns:1fr}.spec-grid,.certs{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:860px){.desktop-nav{display:none}.menu-toggle{display:inline-block}.hero h2{font-size:38px}.hero-img{height:330px}.spec-grid,.certs,.gallery,.footer-grid{grid-template-columns:1fr}.section-title h3{font-size:30px}}
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --primary:#0f172a;
+      --navy:#111c3f;
+      --deep:#08111f;
+      --accent:#2563eb;
+      --accent2:#38bdf8;
+      --red:#ef233c;
+      --soft:#f8fafc;
+      --border:#e2e8f0;
+      --muted:#475569;
+      --green:#16a34a;
+      --glass:rgba(255,255,255,.09);
+      --glass-border:rgba(255,255,255,.18);
+    }
+
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--primary);
+      line-height:1.6;
+      background:#fff;
+      overflow-x:hidden;
+    }
+    .container{width:92%;max-width:1240px;margin:auto}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--border);
+      backdrop-filter:blur(10px);
+    }
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+    .brand img{width:52px;height:52px;object-fit:contain;border-radius:14px;border:1px solid var(--border);padding:4px}
+    .brand h1{font-size:24px;color:var(--accent);line-height:1}
+    .brand span{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:2px}
+    .desktop-nav{display:flex;align-items:center;flex-wrap:wrap}
+    .desktop-nav a{color:#64748b;text-decoration:none;margin-left:22px;font-size:15px;font-weight:700;position:relative}
+    .desktop-nav a::after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.25s}
+    .desktop-nav a:hover{color:var(--accent)}
+    .desktop-nav a:hover::after{width:100%}
+    .menu-toggle{display:none;border:none;background:var(--primary);color:white;font-size:24px;padding:10px 14px;border-radius:12px;cursor:pointer}
+
+    .mobile-menu-overlay{position:fixed;inset:0;background:rgba(15,23,42,.45);display:none;z-index:998}
+    .mobile-menu-overlay.active{display:block}
+    .mobile-menu{position:fixed;top:0;right:-320px;width:290px;max-width:85vw;height:100vh;background:white;box-shadow:0 20px 60px rgba(15,23,42,.18);z-index:999;transition:right .25s ease}
+    .mobile-menu.active{right:0}
+    .mobile-menu-header{display:flex;justify-content:space-between;padding:22px 18px;border-bottom:1px solid var(--border);background:var(--soft)}
+    .mobile-menu-header strong{font-size:22px;color:var(--accent)}
+    .mobile-menu-header span{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px}
+    .mobile-close{border:none;background:transparent;font-size:28px;color:var(--muted);cursor:pointer}
+    .mobile-menu-links{display:flex;flex-direction:column}
+    .mobile-menu-links a{text-decoration:none;color:var(--primary);font-weight:700;padding:14px 20px;border-bottom:1px solid #f1f5f9}
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      color:white;
+      padding:88px 0 78px;
+      background:
+        radial-gradient(circle at 82% 28%, rgba(239,35,60,.24), transparent 25%),
+        radial-gradient(circle at 18% 74%, rgba(37,99,235,.32), transparent 32%),
+        linear-gradient(135deg,#091326 0%,#132858 48%,#1e3a8a 100%);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(115deg, transparent 0 50%, rgba(255,255,255,.055) 50% 51%, transparent 51%),
+        linear-gradient(155deg, transparent 0 62%, rgba(56,189,248,.08) 62% 63%, transparent 63%);
+      background-size:240px 240px,300px 300px;
+      opacity:.45;
+      animation:gridMove 16s linear infinite;
+      pointer-events:none;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      width:520px;height:520px;
+      right:-180px;bottom:-250px;
+      background:radial-gradient(circle, rgba(56,189,248,.25), transparent 62%);
+      filter:blur(6px);
+      pointer-events:none;
+    }
+    @keyframes gridMove{to{background-position:240px 240px, -300px 300px}}
+
+    .hero-grid{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:1fr 1.08fr;
+      gap:54px;
+      align-items:center;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:10px 18px;
+      border-radius:999px;
+      background:rgba(255,255,255,.13);
+      border:1px solid rgba(255,255,255,.25);
+      font-weight:800;
+      font-size:14px;
+      margin-bottom:22px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.14);
+    }
+    .pill i{color:#93c5fd}
+    .hero h2{font-size:58px;line-height:1.04;margin-bottom:18px;letter-spacing:-1.8px}
+    .hero h2 span{
+      display:inline-block;
+      background:linear-gradient(90deg,#fff,#bfdbfe 45%,#38bdf8);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .hero p{font-size:18px;color:#e2e8f0;max-width:650px}
+    .buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      text-align:center;
+      text-decoration:none;
+      border:none;
+      border-radius:15px;
+      padding:14px 19px;
+      font-weight:900;
+      cursor:pointer;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:white;color:var(--primary);box-shadow:0 16px 35px rgba(0,0,0,.18)}
+    .btn-wa{background:#22c55e;color:white;box-shadow:0 16px 35px rgba(34,197,94,.22)}
+    .btn-soft{background:#dbeafe;color:var(--accent)}
+    .btn-heart{background:rgba(255,255,255,.96);border:1px solid #e2e8f0;color:#dc2626}
+
+    .hero-product-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:34px;
+      padding:18px;
+      min-height:455px;
+      background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.055));
+      border:1px solid var(--glass-border);
+      box-shadow:0 28px 80px rgba(0,0,0,.30);
+      backdrop-filter:blur(14px);
+    }
+    .hero-product-card::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(56,189,248,.30), transparent 26%),
+        radial-gradient(circle at 92% 42%, rgba(239,35,60,.24), transparent 25%);
+      opacity:.8;
+      pointer-events:none;
+    }
+    .hero-media{
+      position:relative;
+      overflow:hidden;
+      border-radius:24px;
+      height:430px;
+      background:#05070b;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+    }
+    .hero-media-track{
+      display:flex;
+      width:500%;
+      height:100%;
+      animation:heroSlider 25s infinite ease-in-out;
+    }
+    .hero-media-slide{
+      width:20%;
+      flex:0 0 20%;
+      height:100%;
+      position:relative;
+    }
+    .hero-media-slide img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+      padding:10px;
+      filter:drop-shadow(0 18px 28px rgba(0,0,0,.45));
+      transform:scale(1.02);
+      animation:slowZoom 8s ease-in-out infinite alternate;
+    }
+    @keyframes slowZoom{to{transform:scale(1.07)}}
+    @keyframes heroSlider{
+      0%,16%{transform:translateX(0)}
+      20%,36%{transform:translateX(-20%)}
+      40%,56%{transform:translateX(-40%)}
+      60%,76%{transform:translateX(-60%)}
+      80%,96%{transform:translateX(-80%)}
+      100%{transform:translateX(0)}
+    }
+    .hero-badge{
+      position:absolute;
+      top:18px;
+      left:18px;
+      z-index:3;
+      padding:9px 13px;
+      border-radius:999px;
+      background:rgba(239,35,60,.88);
+      color:white;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      box-shadow:0 12px 24px rgba(239,35,60,.26);
+    }
+    .hero-mini-specs{
+      position:absolute;
+      left:14px;
+      right:14px;
+      bottom:14px;
+      z-index:4;
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:8px;
+    }
+    .hero-mini-spec{
+      background:rgba(5,10,20,.70);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:15px;
+      padding:10px 7px;
+      text-align:center;
+      backdrop-filter:blur(10px);
+    }
+    .hero-mini-spec i{display:block;color:#ef4444;font-size:16px;margin-bottom:4px}
+    .hero-mini-spec strong{display:block;font-size:13px;color:white;line-height:1.15}
+    .hero-mini-spec span{display:block;font-size:10px;color:#cbd5e1;line-height:1.2}
+
+    section{padding:72px 0}
+    .section-title small{font-size:12px;text-transform:uppercase;letter-spacing:3px;color:var(--accent);font-weight:900}
+    .section-title h3{font-size:38px;margin:12px 0;line-height:1.14}
+    .section-title p{color:var(--muted);font-size:17px;max-width:780px}
+
+    .spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+    .spec-card{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:0 12px 28px rgba(15,23,42,.06);
+      transition:.25s ease;
+    }
+    .spec-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(15,23,42,.10)}
+    .spec-card small{color:#64748b;font-size:12px;text-transform:uppercase;letter-spacing:1.8px;font-weight:900}
+    .spec-card strong{display:block;font-size:24px;margin-top:8px}
+    .price-note{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:#fff7ed;
+      border:1px solid #fed7aa;
+      border-radius:999px;
+      padding:13px 18px;
+      color:#9a3412;
+      margin-top:28px;
+      font-weight:900;
+    }
+
+    .table-wrap{overflow:auto;border:1px solid var(--border);border-radius:22px;margin-top:28px;background:white}
+    .tech{width:100%;border-collapse:collapse;min-width:620px}
+    .tech td{padding:16px;border-bottom:1px solid var(--border)}
+    .tech tr:last-child td{border-bottom:0}
+    .tech td:first-child{font-weight:900;background:var(--soft);width:35%}
+
+    .gallery-carousel{
+      position:relative;
+      margin-top:30px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      border-radius:28px;
+      background:#fff;
+      box-shadow:0 18px 50px rgba(15,23,42,.10);
+    }
+    .gallery-track{
+      display:flex;
+      width:max-content;
+      animation:e9proCarousel 58s linear infinite;
+    }
+    .gallery-carousel:hover .gallery-track{animation-play-state:paused}
+    .gallery-slide{
+      width:760px;
+      max-width:92vw;
+      height:460px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg,#fff,#f8fafc);
+      flex:0 0 auto;
+      padding:22px;
+    }
+    .gallery-slide img{width:100%;height:100%;object-fit:contain;border-radius:22px;background:#fff}
+    .gallery-caption{
+      position:absolute;
+      left:18px;
+      bottom:18px;
+      background:rgba(15,23,42,.78);
+      color:white;
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
+      backdrop-filter:blur(8px);
+    }
+    @keyframes e9proCarousel{to{transform:translateX(-50%)}}
+
+    .compare-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:30px;
+    }
+    .compare-card{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:22px;
+      box-shadow:0 12px 28px rgba(15,23,42,.06);
+      position:relative;
+      overflow:hidden;
+    }
+    .compare-card.featured{border-color:rgba(37,99,235,.4);box-shadow:0 22px 48px rgba(37,99,235,.12)}
+    .compare-card.featured::before{content:"Económico";position:absolute;right:18px;top:18px;background:#dbeafe;color:#2563eb;font-size:12px;font-weight:900;border-radius:999px;padding:7px 10px}
+    .compare-card h4{font-size:22px;margin-bottom:10px}
+    .compare-card ul{list-style:none;margin-top:14px}
+    .compare-card li{border-top:1px solid #eef2f7;padding:10px 0;color:#475569}
+    .compare-card li strong{color:#0f172a}
+
+    .certs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+    .cert{background:white;border:1px solid var(--border);border-radius:20px;padding:22px;box-shadow:0 12px 28px rgba(15,23,42,.05)}
+    .cert strong{display:block;font-size:20px}
+
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+    .testimonial{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 12px 28px rgba(15,23,42,.06);
+    }
+    .stars{color:#f59e0b;margin-bottom:10px}
+    .testimonial p{color:#475569}
+    .testimonial strong{display:block;margin-top:15px}
+
+    .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+    .video-card{
+      min-height:220px;
+      border-radius:24px;
+      overflow:hidden;
+      background:
+        linear-gradient(rgba(7,12,25,.45),rgba(7,12,25,.7)),
+        url("images/eco1.png") center/contain no-repeat #05070b;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      border:1px solid rgba(255,255,255,.12);
+      position:relative;
+    }
+    .video-card:nth-child(2){background-image:linear-gradient(rgba(7,12,25,.45),rgba(7,12,25,.7)),url("images/eco3.png")}
+    .video-card:nth-child(3){background-image:linear-gradient(rgba(7,12,25,.45),rgba(7,12,25,.7)),url("images/eco2.png")}
+    .play{
+      width:66px;height:66px;border-radius:50%;
+      background:rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.35);
+      display:flex;align-items:center;justify-content:center;
+      backdrop-filter:blur(10px);
+      font-size:24px;
+    }
+    .video-card span{position:absolute;left:18px;bottom:16px;font-weight:900}
+
+    .auth-modal{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;justify-content:center;align-items:center;padding:20px;z-index:1000}
+    .auth-box{background:white;width:100%;max-width:390px;border-radius:24px;padding:28px;box-shadow:0 25px 60px rgba(15,23,42,.25);position:relative}
+    .auth-box h3{font-size:28px;margin-bottom:8px}
+    .auth-subtitle{color:var(--muted);font-size:14px;margin-bottom:20px}
+    .auth-box input{width:100%;margin-bottom:12px;padding:14px 16px;border-radius:14px;border:1px solid var(--border);font-size:14px}
+    .auth-box button{width:100%;padding:13px 16px;border-radius:14px;border:none;font-size:15px;font-weight:800;cursor:pointer;margin-bottom:10px}
+    .close-auth{position:absolute!important;top:14px;right:16px;background:transparent!important;width:auto!important;font-size:24px;color:#64748b;padding:0!important}
+    .btn-register{background:var(--accent);color:white}
+    .btn-login{background:#e2e8f0;color:var(--primary)}
+    #authMessage{margin-top:8px;font-size:14px;min-height:20px}
+
+    .footer-links-section{background:#f8fafc;border-top:1px solid var(--border);padding:50px 0 18px}
+    .footer-grid{display:grid;grid-template-columns:1.1fr 1fr 1.2fr 1fr;gap:34px}
+    .footer-col h4{font-size:18px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #cbd5e1}
+    .footer-col a{display:block;text-decoration:none;color:var(--muted);font-size:15px;margin-bottom:8px}
+    .footer-col p{color:var(--muted);font-size:15px}
+    footer{text-align:center;padding:34px 20px;background:var(--primary);color:#cbd5e1;font-size:14px}
+
+    .reveal{animation:fadeUp .75s ease both}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+    @media(max-width:1024px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero-product-card{max-width:760px}
+      .spec-grid,.certs,.compare-grid,.testimonials,.video-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:860px){
+      .desktop-nav{display:none}
+      .menu-toggle{display:inline-block}
+      .nav{padding:14px 0}
+      .brand img{width:48px;height:48px}
+      .hero{padding:58px 0}
+      .hero h2{font-size:40px}
+      .hero p{font-size:16px}
+      .hero-product-card{padding:12px;border-radius:28px;min-height:auto}
+      .hero-media{height:340px}
+      .hero-mini-specs{grid-template-columns:repeat(2,1fr)}
+      .hero-mini-spec:last-child{grid-column:1 / -1}
+      .spec-grid,.certs,.compare-grid,.testimonials,.video-grid,.footer-grid{grid-template-columns:1fr}
+      .gallery-slide{width:92vw;height:340px;padding:14px}
+      .gallery-caption{font-size:12px;left:12px;bottom:12px}
+      .section-title h3{font-size:30px}
+      .buttons .btn{width:100%}
+    }
   </style>
 </head>
+
 <body onload="trackView('eco','Griden Eco')">
-<header><div class="container nav"><div class="brand"><img src="Griden_Logo.png" alt="Griden Logo"><div><h1>Griden</h1><span>Energía y Tecnología</span></div></div><button class="menu-toggle" onclick="openMobileMenu()">☰</button><nav class="desktop-nav"><a href="/">Inicio</a><a href="/servicios">Servicios</a><a href="/catalogo">Productos</a><a href="/solarrate">SolarRate</a><a href="/conoce">Nosotros</a><a href="/contacto">Contacto</a><a href="javascript:void(0)" id="authNavLink" onclick="openAuth()">Mi cuenta</a><a href="javascript:void(0)" id="logoutLink" onclick="logout()" style="display:none;">Cerrar sesión</a></nav></div></header>
-<div id="mobileMenuOverlay" class="mobile-menu-overlay" onclick="closeMobileMenu()"></div><aside id="mobileMenu" class="mobile-menu"><div class="mobile-menu-header"><div><strong>Griden</strong><br><span>Energía y Tecnología</span></div><button class="mobile-close" onclick="closeMobileMenu()">×</button></div><div class="mobile-menu-links"><a href="/">Inicio</a><a href="/catalogo">Productos</a><a href="/contacto">Contacto</a><a href="javascript:void(0)" id="mobileAuthLink" onclick="openAuth();closeMobileMenu();">Mi cuenta</a><a href="javascript:void(0)" id="mobileLogoutLink" onclick="logout();closeMobileMenu();" style="display:none;">Cerrar sesión</a></div></aside>
-<section class="hero"><div class="container hero-grid"><div><span class="pill">Scooter eléctrico Griden</span><h2>Griden Eco</h2><p>Movilidad eléctrica urbana eficiente para recorridos diarios, con batería de litio y soporte técnico local.</p><div class="buttons"><a class="btn btn-primary" href="https://wa.me/59169969051?text=Hola%20Griden,%20quiero%20cotizar%20el%20modelo%20Griden Eco" target="_blank">Cotizar por WhatsApp</a><button class="btn btn-heart" onclick="saveFavorite('eco','Griden Eco')">❤️ Guardar</button><button class="btn btn-soft" onclick="registerInterest('eco','Griden Eco')">Estoy interesado</button></div></div><img class="hero-img" src="img/scooter-eco.jpg" alt="Griden Eco" onerror="this.src='https://blog.movistar.com.co/wp-content/uploads/2024/05/scooter-electrico.webp'"></div></section>
-<section><div class="container"><div class="section-title"><small>Características</small><h3>Ficha rápida del modelo</h3><p>Modelo ideal para ciudad, trayectos cortos y clientes que buscan economía, practicidad y respaldo técnico.</p></div><div class="spec-grid"><div class="spec-card"><small>Batería</small><strong>36V 10.4Ah</strong></div><div class="spec-card"><small>Motor</small><strong>350W</strong></div><div class="spec-card"><small>Llanta</small><strong>8.5”</strong></div><div class="spec-card"><small>Uso</small><strong>Urbano</strong></div></div><div class="note"><strong>Precio:</strong> Desde Bs2.999. Los datos técnicos finales deben validarse con placa característica, manual del usuario, certificado UN38.3 y MSDS del lote.</div></div></section>
-<section style="background:var(--soft)"><div class="container"><div class="section-title"><small>Ficha técnica</small><h3>Especificaciones técnicas</h3><p>Completa o ajusta estos valores cuando tengas la ficha final del proveedor.</p></div><div class="table-wrap"><table class="tech"><tr><td>Modelo comercial</td><td>Griden Eco</td></tr><tr><td>Categoría</td><td>Scooter eléctrico / monopatín eléctrico</td></tr><tr><td>Batería</td><td>Litio - confirmar capacidad final</td></tr><tr><td>Motor</td><td>Confirmar potencia nominal</td></tr><tr><td>Velocidad máxima</td><td>Confirmar según configuración del lote</td></tr><tr><td>Autonomía</td><td>Variable según peso, velocidad, pendiente y modo de uso</td></tr><tr><td>Tiempo de carga</td><td>Confirmar con cargador incluido</td></tr><tr><td>Garantía</td><td>Según política comercial Griden</td></tr></table></div></div></section>
-<section><div class="container"><div class="section-title"><small>Galería</small><h3>Imágenes del producto</h3><p>Reemplaza estas imágenes por fotos reales del lote cuando lleguen los equipos.</p></div><div class="gallery"><img src="img/scooter-eco.jpg" onerror="this.src='https://blog.movistar.com.co/wp-content/uploads/2024/05/scooter-electrico.webp'" alt="Griden Eco imagen 1"><img src="img/eco-detalle-1.jpg" onerror="this.src='https://blog.movistar.com.co/wp-content/uploads/2024/05/scooter-electrico.webp'" alt="Griden Eco detalle"><img src="img/eco-detalle-2.jpg" onerror="this.src='https://blog.movistar.com.co/wp-content/uploads/2024/05/scooter-electrico.webp'" alt="Griden Eco vista lateral"></div></div></section>
-<section style="background:var(--soft)"><div class="container"><div class="section-title"><small>Documentación</small><h3>Certificaciones y respaldo técnico</h3><p>Esta sección debe mostrar la ventaja de Griden: producto vendido con soporte técnico, trazabilidad y documentación.</p></div><div class="certs"><div class="cert"><strong>UN38.3</strong><span>Transporte de batería de litio</span></div><div class="cert"><strong>MSDS</strong><span>Hoja de seguridad de batería</span></div><div class="cert"><strong>CE</strong><span>Conformidad del producto</span></div><div class="cert"><strong>Manual</strong><span>Uso, carga y seguridad</span></div></div></div></section>
-<section><div class="container"><div class="section-title"><small>Compra y reserva</small><h3>¿Te interesa este modelo?</h3><p>Registra tu interés o comunícate directamente con Griden para disponibilidad, precio final y condiciones de entrega.</p></div><div class="buttons"><button class="btn btn-soft" onclick="registerInterest('eco','Griden Eco')">Registrar interés</button><a class="btn btn-wa" href="https://wa.me/59169969051?text=Hola%20Griden,%20quiero%20información%20del%20modelo%20Griden Eco" target="_blank">WhatsApp Griden</a><a class="btn btn-primary" style="background:#0f172a;color:white" href="/catalogo">Volver al catálogo</a></div></div></section>
-<div id="authModal" class="auth-modal"><div class="auth-box"><button class="close-auth" onclick="closeAuth()">&times;</button><h3>Mi cuenta</h3><p class="auth-subtitle">Regístrate o inicia sesión para guardar tus modelos favoritos.</p><input type="email" id="email" placeholder="Correo electrónico"><input type="password" id="password" placeholder="Contraseña"><button class="btn-register" onclick="register()">Registrarse</button><button class="btn-login" onclick="login()">Iniciar sesión</button><div id="authMessage"></div></div></div>
-<section class="footer-links-section"><div class="container"><div class="footer-grid"><div class="footer-col"><h4>Catálogo</h4><a href="/catalogo">Todos los productos</a><a href="/scooter-eco">Griden Eco</a><a href="/scooter-m2">Griden Urban M2</a><a href="/scooter-e9pro">Griden Urban Pro</a><a href="/scooter-t4">Griden T4 Max</a></div><div class="footer-col"><h4>Atención al cliente</h4><a href="javascript:void(0)" onclick="openAuth()">Mi cuenta</a><a href="/contacto">Solicitar información</a><a href="https://wa.me/59169969051" target="_blank">WhatsApp</a></div><div class="footer-col"><h4>Sobre Griden</h4><p>Soluciones en energía, electromovilidad, ingeniería eléctrica y tecnología en Bolivia.</p></div><div class="footer-col"><h4>Información</h4><a href="/terminos">Términos y condiciones</a><a href="/privacidad">Política de privacidad</a></div></div></div></section><footer>© 2026 Griden · Energía · Tecnología · Soluciones</footer>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script><script src="firebase-griden.js"></script>
-</body></html>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="/">
+      <img src="Griden_Logo.png" alt="Griden Logo">
+      <div>
+        <h1>Griden</h1>
+        <span>Energía y Tecnología</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" onclick="openMobileMenu()">☰</button>
+
+    <nav class="desktop-nav">
+      <a href="/">Inicio</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/catalogo">Productos</a>
+      <a href="/solarrate">SolarRate</a>
+      <a href="/conoce">Nosotros</a>
+      <a href="/contacto">Contacto</a>
+      <a href="javascript:void(0)" id="authNavLink" onclick="openAuth()">Mi cuenta</a>
+      <a href="javascript:void(0)" id="logoutLink" onclick="logout()" style="display:none;">Cerrar sesión</a>
+    </nav>
+  </div>
+</header>
+
+<div id="mobileMenuOverlay" class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+<aside id="mobileMenu" class="mobile-menu">
+  <div class="mobile-menu-header">
+    <div>
+      <strong>Griden</strong><br>
+      <span>Energía y Tecnología</span>
+    </div>
+    <button class="mobile-close" onclick="closeMobileMenu()">×</button>
+  </div>
+  <div class="mobile-menu-links">
+    <a href="/">Inicio</a>
+    <a href="/servicios">Servicios</a>
+    <a href="/catalogo">Productos</a>
+    <a href="/solarrate">SolarRate</a>
+    <a href="/conoce">Nosotros</a>
+    <a href="/contacto">Contacto</a>
+    <a href="javascript:void(0)" id="mobileAuthLink" onclick="openAuth();closeMobileMenu();">Mi cuenta</a>
+    <a href="javascript:void(0)" id="mobileLogoutLink" onclick="logout();closeMobileMenu();" style="display:none;">Cerrar sesión</a>
+  </div>
+</aside>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="pill"><i class="fa-solid fa-bolt"></i> Scooter eléctrico Griden</span>
+      <h2>Griden <span>Eco</span></h2>
+      <p>Modelo Eco orientado a usuarios que buscan movilidad eléctrica práctica, económica y eficiente para trayectos urbanos.</p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://wa.me/59169969051?text=Hola%20Griden,%20quiero%20cotizar%20el%20modelo%20Griden%20Eco" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+        </a>
+        <button class="btn btn-heart" onclick="saveFavorite('eco','Griden Eco')">
+          <i class="fa-solid fa-heart"></i> Guardar
+        </button>
+        <button class="btn btn-soft" onclick="registerInterest('eco','Griden Eco')">
+          Estoy interesado
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-product-card reveal">
+      <div class="hero-badge">Eco</div>
+
+      <div class="hero-media">
+        <div class="hero-media-track">
+          <div class="hero-media-slide"><img src="images/ecobaner.png" alt="Griden Eco portada"></div>
+          <div class="hero-media-slide"><img src="images/eco1.png" alt="Griden Eco vista 1"></div>
+          <div class="hero-media-slide"><img src="images/eco2.png" alt="Griden Eco vista 2"></div>
+          <div class="hero-media-slide"><img src="images/eco3.png" alt="Griden Eco vista 3"></div>
+          <div class="hero-media-slide"><img src="images/eco4.png" alt="Griden Eco vista 4"></div>
+        </div>
+
+        <div class="hero-mini-specs">
+          <div class="hero-mini-spec"><i class="fa-solid fa-gauge-high"></i><strong>25 km/h</strong><span>Velocidad máx.</span></div>
+          <div class="hero-mini-spec"><i class="fa-solid fa-route"></i><strong>20 km</strong><span>Autonomía aprox.</span></div>
+          <div class="hero-mini-spec"><i class="fa-solid fa-bolt"></i><strong>350 W</strong><span>Motor nominal</span></div>
+          <div class="hero-mini-spec"><i class="fa-solid fa-shield-halved"></i><strong>E-ABS</strong><span>Freno seguro</span></div>
+          <div class="hero-mini-spec"><i class="fa-solid fa-circle-dot"></i><strong>8,5”</strong><span>Neumáticos</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <small>Características</small>
+      <h3>Ficha rápida del modelo</h3>
+      <p>Opción de entrada para clientes que buscan movilidad urbana, bajo costo operativo y facilidad de uso.</p>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-card"><small>Batería</small><strong>Litio</strong></div>
+      <div class="spec-card"><small>Modelo</small><strong>Eco</strong></div>
+      <div class="spec-card"><small>Llanta</small><strong>8,5”</strong></div>
+      <div class="spec-card"><small>Segmento</small><strong>Eco</strong></div>
+    </div>
+
+    <div class="price-note"><i class="fa-solid fa-tag"></i> Precio referencial: consultar disponibilidad</div>
+  </div>
+</section>
+
+<section style="background:var(--soft)">
+  <div class="container">
+    <div class="section-title">
+      <small>Ficha técnica</small>
+      <h3>Especificaciones técnicas</h3>
+    </div>
+
+    <div class="table-wrap">
+      <table class="tech">
+        <tr><td>Modelo comercial</td><td>Griden Eco</td></tr>
+        <tr><td>Categoría</td><td>Scooter eléctrico / monopatín eléctrico</td></tr>
+        <tr><td>Batería</td><td>Litio - 36V 7.6Ah</td></tr>
+        <tr><td>Motor</td><td>350 W potencia nominal</td></tr>
+        <tr><td>Velocidad máxima</td><td>25 km/h</td></tr>
+        <tr><td>Autonomía</td><td>20 km aproximadamente, variable según peso, velocidad, pendiente y modo de uso</td></tr>
+        <tr><td>Tiempo de carga</td><td>4 a 5 horas aproximadamente</td></tr>
+        <tr><td>Garantía</td><td>Revisar política comercial Griden</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <small>Galería</small>
+      <h3>Imágenes reales del producto</h3>
+      <p>Fotografías reales del modelo Eco comercializado por Griden Bolivia. La galería se desplaza automáticamente y se pausa al pasar el mouse.</p>
+    </div>
+
+    <div class="gallery-carousel">
+      <div class="gallery-track">
+        <div class="gallery-slide"><img src="images/ecobaner.png" alt="Griden Eco portada"></div>
+        <div class="gallery-slide"><img src="images/eco1.png" alt="Griden Eco vista 1"></div>
+        <div class="gallery-slide"><img src="images/eco2.png" alt="Griden Eco vista 2"></div>
+        <div class="gallery-slide"><img src="images/eco3.png" alt="Griden Eco vista 3"></div>
+        <div class="gallery-slide"><img src="images/eco4.png" alt="Griden Eco vista 4"></div>
+        <div class="gallery-slide"><img src="images/eco5.png" alt="Griden Eco vista 5"></div>
+        <div class="gallery-slide"><img src="images/eco6.png" alt="Griden Eco vista 6"></div>
+        <div class="gallery-slide"><img src="images/eco7.png" alt="Griden Eco vista 7"></div>
+
+        <div class="gallery-slide"><img src="images/ecobaner.png" alt="Griden Eco portada"></div>
+        <div class="gallery-slide"><img src="images/eco1.png" alt="Griden Eco vista 1"></div>
+        <div class="gallery-slide"><img src="images/eco2.png" alt="Griden Eco vista 2"></div>
+        <div class="gallery-slide"><img src="images/eco3.png" alt="Griden Eco vista 3"></div>
+        <div class="gallery-slide"><img src="images/eco4.png" alt="Griden Eco vista 4"></div>
+        <div class="gallery-slide"><img src="images/eco5.png" alt="Griden Eco vista 5"></div>
+        <div class="gallery-slide"><img src="images/eco6.png" alt="Griden Eco vista 6"></div>
+        <div class="gallery-slide"><img src="images/eco7.png" alt="Griden Eco vista 7"></div>
+      </div>
+      <div class="gallery-caption">Desliza automáticamente · pausa al pasar el mouse</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--soft)">
+  <div class="container">
+    <div class="section-title">
+      <small>Comparador</small>
+      <h3>Comparación visual entre modelos</h3>
+      <p>Una sección simple para ayudar al cliente a diferenciar el modelo Eco frente a otras opciones del catálogo.</p>
+    </div>
+
+    <div class="compare-grid">
+      <div class="compare-card featured">
+        <h4>Griden Eco</h4>
+        <p>Entrada urbana</p>
+        <ul>
+          <li><strong>Uso:</strong> trayectos cortos</li>
+          <li><strong>Segmento:</strong> económico</li>
+          <li><strong>Cliente:</strong> primera compra</li>
+        </ul>
+      </div>
+
+      <div class="compare-card">
+        <h4>Griden Urban Pro</h4>
+        <p>Equilibrio entre desempeño y presencia visual</p>
+        <ul>
+          <li><strong>Uso:</strong> ciudad y recorridos diarios</li>
+          <li><strong>Motor:</strong> 350 W nominal</li>
+          <li><strong>Cliente:</strong> busca una opción económica y funcional</li>
+        </ul>
+      </div>
+
+      <div class="compare-card">
+        <h4>Griden T4 Max</h4>
+        <p>Mayor presencia y robustez</p>
+        <ul>
+          <li><strong>Uso:</strong> trayectos más exigentes</li>
+          <li><strong>Segmento:</strong> superior</li>
+          <li><strong>Cliente:</strong> busca mayor potencia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <small>Videos cortos</small>
+      <h3>Videos demostrativos</h3>
+        </div>
+
+    <div class="video-grid">
+      <div class="video-card"><div class="play"><i class="fa-solid fa-play"></i></div><span>Vista 360°</span></div>
+      <div class="video-card"><div class="play"><i class="fa-solid fa-play"></i></div><span>Detalles del modelo</span></div>
+      <div class="video-card"><div class="play"><i class="fa-solid fa-play"></i></div><span>Sistema plegable</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--soft)">
+  <div class="container">
+    <div class="section-title">
+      <small>Documentación</small>
+      <h3>Certificaciones y respaldo técnico</h3>
+    </div>
+
+    <div class="certs">
+      <div class="cert"><strong>UN38.3</strong><span>Transporte de batería de litio</span></div>
+      <div class="cert"><strong>MSDS</strong><span>Hoja de seguridad de batería</span></div>
+      <div class="cert"><strong>CE</strong><span>Conformidad del producto</span></div>
+      <div class="cert"><strong>Manual</strong><span>Uso, carga y seguridad</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <small>Experiencia</small>
+      <h3>Opiniones de clientes</h3>
+        </div>
+
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>“Se siente estable, cómodo y con buena presencia para uso diario.”</p>
+        <strong>Roberto C.</strong>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★</div>
+        <p>“Me gustó el diseño y la atención técnica antes de comprar.”</p>
+        <strong>Miguel Medina</strong>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>“Buena opción para moverse en la ciudad sin depender del tráfico y los bloqueos de La Paz!!!!.”</p>
+        <strong>Gabriela Ch.</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:linear-gradient(135deg,#0f172a,#1e3a8a);color:white">
+  <div class="container">
+    <div class="section-title">
+      <small style="color:#93c5fd">Compra y reserva</small>
+      <h3>¿Te interesa este modelo?</h3>
+      <p style="color:#dbeafe">Registra tu interés o comunícate directamente con Griden para disponibilidad, precio final y condiciones de entrega.</p>
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-soft" onclick="registerInterest('eco','Griden Eco')">Registrar interés</button>
+      <a class="btn btn-wa" href="https://wa.me/59169969051?text=Hola%20Griden,%20quiero%20información%20del%20modelo%20Griden%20Eco" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp Griden
+      </a>
+      <a class="btn btn-primary" href="/catalogo">Volver al catálogo</a>
+    </div>
+  </div>
+</section>
+
+<div id="authModal" class="auth-modal">
+  <div class="auth-box">
+    <button class="close-auth" onclick="closeAuth()">&times;</button>
+    <h3>Mi cuenta</h3>
+    <p class="auth-subtitle">Regístrate o inicia sesión para guardar tus modelos favoritos.</p>
+    <input type="email" id="email" placeholder="Correo electrónico">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button class="btn-register" onclick="register()">Registrarse</button>
+    <button class="btn-login" onclick="login()">Iniciar sesión</button>
+    <div id="authMessage"></div>
+  </div>
+</div>
+
+<section class="footer-links-section">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Catálogo</h4>
+        <a href="/catalogo">Todos los productos</a>
+        <a href="/scooter-eco">Griden Eco</a>
+        <a href="/scooter-m2">Griden Urban M2</a>
+        <a href="/scooter-e9pro">Griden Eco</a>
+        <a href="/scooter-t4">Griden T4 Max</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atención al cliente</h4>
+        <a href="javascript:void(0)" onclick="openAuth()">Mi cuenta</a>
+        <a href="/contacto">Solicitar información</a>
+        <a href="https://wa.me/59169969051" target="_blank">WhatsApp</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sobre Griden</h4>
+        <p>Soluciones en energía, electromovilidad, ingeniería eléctrica y tecnología en Bolivia.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Información</h4>
+        <a href="/terminos">Términos y condiciones</a>
+        <a href="/privacidad">Política de privacidad</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Griden · Energía · Tecnología · Soluciones</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="firebase-griden.js"></script>
+
+</body>
+</html>
