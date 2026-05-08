@@ -1,1549 +1,189 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4S77MHBCQ5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-4S77MHBCQ5');
-  </script>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Productos | Griden</title>
-
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-  <!-- SEO + NOMBRE DE SITIO -->
-  <meta name="application-name" content="GRIDEN">
-  <meta name="apple-mobile-web-app-title" content="GRIDEN">
-  <meta name="title" content="Productos | Griden">
-  <meta name="description" content="Catálogo de productos y soluciones en energía solar, electromovilidad, automatización y equipos eléctricos.">
-
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="GRIDEN">
-  <meta property="og:title" content="Productos | Griden">
-  <meta property="og:description" content="Catálogo de productos y soluciones en energía solar, electromovilidad, automatización y equipos eléctricos.">
-  <meta property="og:url" content="https://www.gridenbolivia.com">
-  <meta property="og:type" content="website">
-
-  <!-- STRUCTURED DATA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "GRIDEN",
-    "url": "https://www.gridenbolivia.com",
-    "logo": "https://www.gridenbolivia.com/Griden_Logo.png"
-  }
-  </script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root{
-      --primary:#0f172a;
-      --primary-dark:#1e3a8a;
-      --accent:#2563eb;
-      --accent-soft:#dbeafe;
-      --text:#0f172a;
-      --muted:#475569;
-      --border:#e2e8f0;
-      --bg:#ffffff;
-      --bg-soft:#f8fafc;
-      --card:#ffffff;
-      --white:#ffffff;
-      --success:#16a34a;
-      --success-dark:#15803d;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.96);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(10px);
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand img {
-      width: 52px;
-      height: 52px;
-      object-fit: contain;
-      border-radius: 14px;
-      background: white;
-      border: 1px solid var(--border);
-      padding: 4px;
-    }
-
-    .brand-text h1 {
-      font-size: 24px;
-      letter-spacing: 0.5px;
-      color: var(--accent);
-    }
-
-    .brand-text span {
-      font-size: 11px;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #94a3b8;
-      text-decoration: none;
-      margin-left: 24px;
-      font-size: 15px;
-      font-weight: 600;
-      transition: 0.2s ease;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    .auth-link {
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .pill {
-      display: inline-block;
-      padding: 10px 18px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      border: 1px solid #bfdbfe;
-      color: var(--accent);
-      font-size: 14px;
-      margin-bottom: 24px;
-      font-weight: 600;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .buttons a {
-      display: inline-block;
-      text-decoration: none;
-      padding: 15px 24px;
-      border-radius: 14px;
-      font-size: 15px;
-      font-weight: bold;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
-    }
-
-    .btn-primary:hover,
-    .btn-whatsapp:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-whatsapp {
-      background: #22c55e;
-      color: white;
-      box-shadow: 0 10px 25px rgba(34,197,94,0.28);
-    }
-
-    section {
-      padding: 85px 0;
-    }
-
-    .section-title small {
-      display: inline-block;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--accent);
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    .section-title h3 {
-      font-size: 40px;
-      color: var(--primary);
-      margin-bottom: 14px;
-      max-width: 760px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-      max-width: 780px;
-      font-size: 17px;
-    }
-
-    .services-grid {
-      margin-top: 34px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .service-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 10px 25px rgba(15,23,42,0.05);
-      transition: 0.2s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .service-card h4 {
-      font-size: 21px;
-      margin-bottom: 12px;
-      color: var(--primary);
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .catalog-section {
-      background: var(--bg-soft);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .catalogo {
-      margin-top: 34px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .producto {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 10px 24px rgba(15,23,42,0.05);
-      transition: 0.2s ease;
-      height: 100%;
-    }
-
-    .producto:hover {
-      transform: translateY(-4px);
-    }
-
-    .producto img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .producto-content {
-      padding: 18px;
-    }
-
-    .producto small {
-      display: inline-block;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #64748b;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .producto h4 {
-      font-size: 20px;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-
-    .producto p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 14px;
-    }
-
-    .producto-link {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      height: 100%;
-    }
-
-    .producto-boton {
-      display: inline-block;
-      text-decoration: none;
-      padding: 11px 16px;
-      border-radius: 12px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .boton-secundario {
-      background: #eef2ff;
-      color: #1e3a8a;
-    }
-
-    .category-grid,
-    .scooter-grid {
-      margin-top: 34px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .category-card,
-    .scooter-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 10px 24px rgba(15,23,42,0.05);
-      transition: 0.2s ease;
-      height: 100%;
-    }
-
-    .category-card:hover,
-    .scooter-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .category-featured {
-      grid-column: span 2;
-    }
-
-    .category-image img,
-    .scooter-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .category-content,
-    .scooter-content {
-      padding: 20px;
-    }
-
-    .category-content small,
-    .scooter-content small {
-      display: inline-block;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #64748b;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-
-    .category-content h4,
-    .scooter-content h4 {
-      font-size: 21px;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-
-    .category-content p,
-    .scooter-content p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 14px;
-    }
-
-    .category-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .scooter-section {
-      background: white;
-    }
-
-    .scooter-card {
-      position: relative;
-    }
-
-    .scooter-badge {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      z-index: 2;
-      background: rgba(15,23,42,0.88);
-      color: white;
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .scooter-content ul {
-      margin: 0 0 16px 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .compare-box {
-      margin-top: 34px;
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 10px 24px rgba(15,23,42,0.04);
-    }
-
-    .compare-box h4 {
-      font-size: 24px;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .compare-box p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .compare-table-wrap {
-      overflow-x: auto;
-    }
-
-    .compare-table {
-      width: 100%;
-      min-width: 720px;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .compare-table th,
-    .compare-table td {
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-      font-size: 14px;
-    }
-
-    .compare-table th {
-      background: #e2e8f0;
-      color: var(--primary);
-    }
-
-    .compare-table a {
-      color: var(--accent);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      margin-top: 34px;
-    }
-
-    .about-text {
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.8;
-    }
-
-    .info-box {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 20px;
-      margin-bottom: 14px;
-      box-shadow: 0 10px 25px rgba(15,23,42,0.04);
-    }
-
-    .info-box strong {
-      display: block;
-      color: var(--primary);
-      margin-bottom: 8px;
-      font-size: 16px;
-    }
-
-    .info-box span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .contact-section {
-      background: white;
-      border-top: 1px solid var(--border);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      margin-top: 34px;
-    }
-
-    .contact-card,
-    .form-card {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 10px 25px rgba(15,23,42,0.04);
-    }
-
-    .contact-card h4,
-    .form-card h4 {
-      color: var(--primary);
-      margin-bottom: 16px;
-      font-size: 22px;
-    }
-
-    .contact-data div {
-      margin-bottom: 12px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .contact-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .contact-buttons a {
-      display: inline-block;
-      text-decoration: none;
-      padding: 13px 18px;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 14px;
-      color: white;
-    }
-
-    .wa1 { background:#16a34a; }
-    .wa2 { background:#15803d; }
-
-    .form-card input,
-    .form-card textarea {
-      width: 100%;
-      margin-bottom: 14px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: white;
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    .form-card textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .form-card button {
-      width: 100%;
-      border: none;
-      background: var(--primary);
-      color: white;
-      padding: 14px 20px;
-      border-radius: 14px;
-      font-size: 15px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .footer-links-section {
-      background: #f8fafc;
-      border-top: 1px solid var(--border);
-      padding: 60px 0 20px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr 1.2fr 1fr;
-      gap: 34px;
-    }
-
-    .footer-col h4 {
-      font-size: 18px;
-      color: var(--primary);
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #cbd5e1;
-    }
-
-    .footer-col a {
-      display: block;
-      text-decoration: none;
-      color: var(--muted);
-      font-size: 15px;
-      margin-bottom: 8px;
-      transition: 0.2s ease;
-    }
-
-    .footer-col a:hover {
-      color: var(--accent);
-    }
-
-    .footer-col p {
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .footer-socials {
-      display: flex;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .footer-socials a {
-      width: 38px;
-      height: 38px;
-      border-radius: 999px;
-      background: var(--primary);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 18px;
-      text-decoration: none;
-    }
-
-    .footer-bottom-line {
-      margin-top: 28px;
-      border-top: 1px solid #cbd5e1;
-    }
-
-    footer {
-      text-align: center;
-      padding: 34px 20px;
-      background: var(--primary);
-      color: #cbd5e1;
-      margin-top: 0;
-      font-size: 14px;
-    }
-
-    /* MODAL AUTH */
-    .auth-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.55);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      z-index: 999;
-    }
-
-    .auth-box {
-      background: #ffffff;
-      width: 100%;
-      max-width: 390px;
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.25);
-      position: relative;
-    }
-
-    .auth-box h3 {
-      font-size: 28px;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .auth-subtitle {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .auth-box input {
-      width: 100%;
-      margin-bottom: 12px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: white;
-      color: var(--text);
-      font-size: 14px;
-      outline: none;
-    }
-
-    .auth-box input:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
-    }
-
-    .auth-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .auth-box button {
-      width: 100%;
-      padding: 13px 16px;
-      border-radius: 14px;
-      border: none;
-      font-size: 15px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .btn-register {
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: white;
-    }
-
-    .btn-login {
-      background: #e2e8f0;
-      color: var(--primary);
-    }
-
-    .btn-register:hover,
-    .btn-login:hover {
-      transform: translateY(-1px);
-    }
-
-    .close-auth {
-      position: absolute;
-      top: 14px;
-      right: 16px;
-      background: transparent;
-      border: none;
-      font-size: 24px;
-      color: #64748b;
-      cursor: pointer;
-      width: auto !important;
-      padding: 0 !important;
-    }
-
-    #authMessage {
-      margin-top: 14px;
-      font-size: 14px;
-      color: var(--muted);
-      min-height: 20px;
-    }
-
-    .menu-toggle {
-      display: none;
-      border: none;
-      background: var(--primary);
-      color: white;
-      font-size: 24px;
-      line-height: 1;
-      padding: 10px 14px;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-
-    .desktop-nav {
-      display: flex;
-      align-items: center;
-    }
-
-    .mobile-menu-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.45);
-      display: none;
-      z-index: 998;
-    }
-
-   .mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -320px;
-  width: 290px;
-  max-width: 85vw;
-  height: 100vh;
-  background: white;
-  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.18);
-  z-index: 999;
-  transition: right 0.25s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-    .mobile-menu.active {
-      right: 0;
-    }
-
-    .mobile-menu-overlay.active {
-      display: block;
-    }
-
-    .mobile-menu-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      padding: 22px 18px;
-      border-bottom: 1px solid var(--border);
-      background: var(--bg-soft);
-    }
-
-    .mobile-menu-header strong {
-      font-size: 22px;
-      color: var(--accent);
-    }
-
-    .mobile-menu-header span {
-      font-size: 11px;
-      color: #64748b;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    .mobile-close {
-      border: none;
-      background: transparent;
-      font-size: 28px;
-      color: var(--muted);
-      cursor: pointer;
-    }
-
-    .mobile-menu-links {
-      display: flex;
-      flex-direction: column;
-      padding: 10px 0;
-    }
-
-    .mobile-menu-links a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 600;
-      padding: 14px 20px;
-      border-bottom: 1px solid #f1f5f9;
-    }
-
-    .mobile-menu-links a:hover {
-      background: var(--bg-soft);
-      color: var(--accent);
-    }
-
-    /* HERO VIDEO */
-    .hero-video {
-      position: relative;
-      min-height: 100vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      padding: 0;
-    }
-
-  .hero-bg-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 80% center; /* SOLO PC */
-  z-index: 1;
-}
-
-/* 🔥 CELULAR NORMAL */
-@media (max-width: 768px) {
-  .hero-bg-video {
-    object-position: center center; /* IMPORTANTE */
-  }
-}
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.55);
-      z-index: 2;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      color: white;
-      padding-top: 140px;
-      padding-bottom: 80px;
-      max-width: 760px;
-      margin-left: 0;
-      margin-right: auto;
-      padding-left: 40px;
-    }
-
-    .hero-content h2,
-    .hero-content p,
-    .hero-content .pill,
-    .hero-content .trust {
-      color: white;
-    }
-
-    .hero-content .pill {
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.25);
-    }
-
-    .hero-content h2 {
-      font-size: 58px;
-      line-height: 1.08;
-      margin-bottom: 18px;
-      max-width: 760px;
-    }
-
-    .hero-content h2 strong {
-      color: #16a34a;
-      font-weight: 700;
-    }
-
-    .hero-content p {
-      max-width: 720px;
-      font-size: 18px;
-      line-height: 1.5;
-      margin-bottom: 26px;
-    }
-
-    .trust {
-      margin-top: 22px;
-      font-size: 15px;
-      color: white;
-      opacity: 0.92;
-      display: block;
-      line-height: 1.6;
-    }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s ease forwards;
-    }
-
-    .fade-up.delay {
-      animation-delay: 0.3s;
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* SECCIÓN ESTADÍSTICAS */
-    .stats-section {
-      background: #f1f5f9;
-      padding: 70px 0;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-    }
-
-    .stat-box {
-      padding: 20px 30px;
-      border-right: 1px solid #e2e8f0;
-    }
-
-    .stat-box:last-child {
-      border-right: none;
-    }
-
-    .counter {
-      font-size: 80px;
-      color: var(--accent);
-      margin-bottom: 12px;
-      line-height: 1;
-      font-weight: 500;
-    }
-
-    .stat-box p {
-      font-size: 18px;
-      color: #0f172a;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 1024px) {
-      .catalogo,
-      .category-grid,
-      .scooter-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .category-featured {
-        grid-column: span 2;
-      }
-
-      .services-grid,
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero-content h2 {
-        font-size: 50px;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-      }
-
-      .stat-box {
-        border-right: none;
-      }
-
-      .counter {
-        font-size: 64px;
-      }
-    }
-
-    @media (max-width: 860px) {
-      .about-grid,
-      .contact-grid,
-      .services-grid,
-      .catalogo,
-      .category-grid,
-      .scooter-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .category-featured {
-        grid-column: span 1;
-      }
-
-      .desktop-nav {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: inline-block;
-      }
-
-      .brand-text h1 {
-        font-size: 20px;
-      }
-
-      .brand-text span {
-        font-size: 10px;
-        letter-spacing: 1.5px;
-      }
-
-      .footer-links-section {
-        padding: 40px 0 16px;
-      }
-
-      .footer-col h4 {
-        font-size: 17px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero-video {
-        min-height: 85vh;
-      }
-
-      .hero-bg-video {
-        display: block;
-      }
-
-      .hero-content {
-        padding-top: 90px;
-        padding-bottom: 60px;
-        padding-left: 20px;
-        padding-right: 20px;
-        max-width: 100%;
-      }
-
-      .hero-content h2 {
-        font-size: 36px;
-        line-height: 1.12;
-        margin-bottom: 16px;
-        max-width: 100%;
-      }
-
-      .hero-content p {
-        font-size: 16px;
-        max-width: 100%;
-      }
-
-      .buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .buttons a {
-        text-align: center;
-      }
-
-      .trust {
-        font-size: 14px;
-        line-height: 1.6;
-      }
-
-      .counter {
-        font-size: 54px;
-      }
-
-      .stat-box p {
-        font-size: 16px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body>
+<!DOCTYPE html><html lang="es"><head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4S77MHBCQ5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4S77MHBCQ5');</script>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Productos | Griden</title><meta name="application-name" content="GRIDEN"><meta name="apple-mobile-web-app-title" content="GRIDEN"><meta name="title" content="Productos | Griden"><meta name="description" content="Catálogo premium de productos y soluciones Griden.">
+<meta property="og:site_name" content="GRIDEN"><meta property="og:title" content="Productos | Griden"><meta property="og:description" content="Catálogo premium de productos y soluciones Griden."><meta property="og:url" content="https://www.gridenbolivia.com/catalogo"><meta property="og:type" content="website">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon.png"><link rel="shortcut icon" href="favicon.ico"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"GRIDEN","url":"https://www.gridenbolivia.com","logo":"https://www.gridenbolivia.com/Griden_Logo.png"}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#0f172a;--accent:#2563eb;--accent2:#38bdf8;--soft:#f8fafc;--border:#e2e8f0;--muted:#475569;--success:#16a34a}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--primary);line-height:1.6;overflow-x:hidden}
+.container{width:92%;max-width:1200px;margin:auto}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(10px)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}.brand img{width:52px;height:52px;object-fit:contain;border-radius:14px;background:#fff;border:1px solid var(--border);padding:4px}
+.brand h1{font-size:24px;color:var(--accent);line-height:1.1}.brand span{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:2px}
+nav{display:flex;align-items:center;flex-wrap:wrap}.desktop-nav{display:flex}
+nav a{color:#64748b;text-decoration:none;margin-left:24px;font-size:15px;font-weight:700;transition:.2s;position:relative}
+nav a:after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.25s}
+nav a:hover{color:var(--accent)}nav a:hover:after{width:100%}
+.auth-link{color:var(--accent);font-weight:800}
+.menu-toggle{display:none;border:0;background:var(--primary);color:#fff;font-size:24px;line-height:1;padding:10px 14px;border-radius:12px;cursor:pointer}
+.mobile-menu-overlay{position:fixed;inset:0;background:rgba(15,23,42,.45);display:none;z-index:998}.mobile-menu-overlay.active{display:block}
+.mobile-menu{position:fixed;top:0;right:-320px;width:290px;max-width:85vw;height:100vh;background:#fff;box-shadow:0 20px 60px rgba(15,23,42,.18);z-index:999;transition:right .25s;display:flex;flex-direction:column}
+.mobile-menu.active{right:0}.mobile-menu-header{display:flex;justify-content:space-between;padding:22px 18px;border-bottom:1px solid var(--border);background:var(--soft)}
+.mobile-menu-header strong{font-size:22px;color:var(--accent)}.mobile-menu-header span{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:1.5px}
+.mobile-close{border:0;background:transparent;font-size:28px;color:var(--muted);cursor:pointer}.mobile-menu-links{display:flex;flex-direction:column;padding:10px 0}
+.mobile-menu-links a{text-decoration:none;color:var(--primary);font-weight:700;padding:14px 20px;border-bottom:1px solid #f1f5f9}
+section{padding:82px 0}
+.hero{position:relative;overflow:hidden;color:#fff;padding:92px 0 82px;background:radial-gradient(circle at 16% 18%,rgba(56,189,248,.28),transparent 28%),radial-gradient(circle at 86% 22%,rgba(22,163,74,.20),transparent 24%),linear-gradient(135deg,#06101f 0%,#0f172a 42%,#1e3a8a 100%)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 0 52%,rgba(255,255,255,.045) 52% 53%,transparent 53%);background-size:260px 260px;opacity:.55;animation:gridMove 18s linear infinite}
+@keyframes gridMove{to{background-position:260px 260px}}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero-kicker{display:inline-flex;gap:10px;align-items:center;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);font-size:14px;font-weight:800;margin-bottom:24px}
+.hero-kicker i{color:#93c5fd}.hero h2{font-size:60px;line-height:1.04;letter-spacing:-1.8px;margin-bottom:20px}.hero h2 span{background:linear-gradient(90deg,#fff,#bfdbfe 45%,#38bdf8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:#dbeafe;font-size:18px;max-width:720px}.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border:0;border-radius:15px;padding:15px 20px;font-weight:900;font-size:15px;cursor:pointer;transition:.22s}
+.btn:hover{transform:translateY(-2px)}.btn-primary{background:#fff;color:var(--primary);box-shadow:0 16px 35px rgba(0,0,0,.18)}.btn-wa{background:#22c55e;color:#fff;box-shadow:0 16px 35px rgba(34,197,94,.22)}.btn-outline{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);color:#fff;backdrop-filter:blur(10px)}
+.hero-panel{overflow:hidden;border-radius:34px;padding:24px;background:linear-gradient(145deg,rgba(255,255,255,.15),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.18);box-shadow:0 28px 80px rgba(0,0,0,.30);backdrop-filter:blur(14px)}
+.hero-panel img{width:100%;height:360px;object-fit:contain;background:rgba(255,255,255,.94);border-radius:26px;padding:18px;display:block}
+.section-title small{display:inline-block;font-size:12px;text-transform:uppercase;letter-spacing:3px;color:var(--accent);margin-bottom:12px;font-weight:800}.section-title h3{font-size:42px;line-height:1.12;color:var(--primary);margin-bottom:14px;max-width:820px;letter-spacing:-.8px}.section-title p{color:var(--muted);max-width:820px;font-size:17px}
+.grid{margin-top:36px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--border);border-radius:28px;box-shadow:0 10px 25px rgba(15,23,42,.06);transition:.25s;height:100%}.card:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(15,23,42,.10);border-color:#cbd5e1}.featured{grid-column:span 2}
+.card-img{position:relative;overflow:hidden;background:#f1f5f9}.card img{width:100%;height:245px;object-fit:cover;display:block;transition:.35s}.card:hover img{transform:scale(1.04)}.scooter-card img{object-fit:contain;background:#f8fafc;padding:10px}
+.card-content{padding:22px}.card-content small{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#64748b;margin-bottom:10px;font-weight:800}.card-content h4{font-size:22px;color:var(--primary);margin-bottom:10px;letter-spacing:-.3px}.card-content p{color:var(--muted);font-size:14px;margin-bottom:16px}
+.producto-link{text-decoration:none;color:inherit;display:block;height:100%}.producto-boton{display:inline-flex;align-items:center;gap:8px;text-decoration:none;padding:11px 16px;border-radius:13px;background:#dbeafe;color:#2563eb;font-size:14px;font-weight:800}.producto-boton.dark{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff}
+.badge{position:absolute;top:14px;left:14px;z-index:2;background:rgba(15,23,42,.88);color:#fff;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800}.card-content ul{list-style:none;display:grid;gap:8px;margin-bottom:18px}.card-content li{font-size:14px;color:#334155;display:flex;gap:8px}.card-content li:before{content:"✓";color:var(--success);font-weight:900}
+.compare-box{margin-top:34px;background:#fff;border:1px solid var(--border);border-radius:28px;padding:26px;box-shadow:0 10px 25px rgba(15,23,42,.06)}.compare-box h4{font-size:26px;margin-bottom:8px}.compare-box p{color:var(--muted);margin-bottom:18px}.compare-table-wrap{overflow-x:auto}.compare-table{width:100%;min-width:720px;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden}.compare-table th,.compare-table td{padding:14px 16px;border-bottom:1px solid var(--border);text-align:left;font-size:14px}.compare-table th{background:#e2e8f0}.compare-table a{color:var(--accent);font-weight:800;text-decoration:none}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.trust-card{background:var(--soft);border:1px solid var(--border);border-radius:24px;padding:24px}.trust-card i{width:48px;height:48px;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));margin-bottom:16px}.trust-card h4{font-size:18px;margin-bottom:8px}.trust-card p{color:var(--muted);font-size:14px}
+.cta{padding:70px 0;background:radial-gradient(circle at 10% 20%,rgba(56,189,248,.22),transparent 28%),linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff}.cta-box{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.cta h3{font-size:36px;line-height:1.15;margin-bottom:10px}.cta p{color:#dbeafe;max-width:760px}
+.footer-links-section{background:#f8fafc;border-top:1px solid var(--border);padding:50px 0 18px}.footer-grid{display:grid;grid-template-columns:1.1fr 1fr 1.2fr 1fr;gap:34px}.footer-col h4{font-size:17px;color:var(--primary);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #cbd5e1}.footer-col a{display:block;text-decoration:none;color:var(--muted);font-size:14px;margin-bottom:7px}.footer-col p{color:var(--muted);font-size:14px;line-height:1.7}.footer-socials{display:flex;gap:12px;margin-top:18px}.footer-socials a{width:38px;height:38px;border-radius:999px;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;text-decoration:none}.footer-bottom-line{margin-top:28px;border-top:1px solid #cbd5e1}footer{text-align:center;padding:34px 20px;background:var(--primary);color:#cbd5e1;font-size:14px}
+.auth-modal{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;justify-content:center;align-items:center;padding:20px;z-index:999}.auth-box{background:#fff;width:100%;max-width:390px;border-radius:24px;padding:28px;box-shadow:0 25px 60px rgba(15,23,42,.25);position:relative}.auth-box h3{font-size:28px;margin-bottom:8px}.auth-subtitle{color:var(--muted);font-size:14px;margin-bottom:20px}.auth-box input{width:100%;margin-bottom:12px;padding:14px 16px;border-radius:14px;border:1px solid var(--border);font-size:14px}.auth-actions{display:flex;flex-direction:column;gap:10px}.auth-box button{width:100%;padding:13px 16px;border-radius:14px;border:0;font-weight:700}.btn-register{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff}.btn-login{background:#e2e8f0;color:var(--primary)}.close-auth{position:absolute;top:14px;right:16px;background:transparent;border:0;font-size:24px;color:#64748b;cursor:pointer;width:auto!important;padding:0!important}
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr}.grid,.footer-grid,.trust-grid{grid-template-columns:repeat(2,1fr)}.featured{grid-column:span 2}.hero h2{font-size:50px}.cta-box{grid-template-columns:1fr}}
+@media(max-width:860px){.desktop-nav{display:none}.menu-toggle{display:inline-block}.brand h1{font-size:20px}.brand span{font-size:10px;letter-spacing:1.5px}.hero{padding:64px 0 58px}.hero h2{font-size:38px;letter-spacing:-.8px}.hero p{font-size:16px}.hero-actions{flex-direction:column;align-items:stretch}.btn{width:100%}section{padding:62px 0}.grid,.footer-grid,.trust-grid{grid-template-columns:1fr}.featured{grid-column:span 1}.card img{height:225px}.hero-panel img{height:280px}.section-title h3{font-size:30px}.cta h3{font-size:30px}.footer-links-section{padding:38px 0 14px}.footer-col h4{font-size:15px;margin-bottom:10px}.footer-col a{font-size:13px;margin-bottom:6px;line-height:1.35}.footer-col p{font-size:13px;line-height:1.55}}
+</style></head><body>
 
 <header>
-    <div class="container nav">
-      <div class="brand">
-        <img src="Griden_Logo.png" alt="Griden Logo">
-        <div class="brand-text">
-          <h1>Griden</h1>
-          <span>Energía y Tecnología</span>
-        </div>
-      </div>
+  <div class="container nav">
+    <a class="brand" href="/">
+      <img src="Griden_Logo.png" alt="Griden Logo">
+      <div class="brand-text"><h1>Griden</h1><span>Energía y Tecnología</span></div>
+    </a>
+    <button class="menu-toggle" onclick="openMobileMenu()" aria-label="Abrir menú">☰</button>
+    <nav class="desktop-nav">
+      <a href="/">Inicio</a><a href="/servicios">Servicios</a><a href="/catalogo">Productos</a><a href="/solarrate">SolarRate</a><a href="/conoce">Nosotros</a><a href="/impacto-social">Impacto social</a><a href="/contacto">Contacto</a><a href="javascript:void(0)" class="auth-link" id="authNavLink" onclick="openAuth()">Mi cuenta</a><a href="javascript:void(0)" class="auth-link" id="logoutLink" onclick="logout()" style="display:none;">Cerrar sesión</a>
+    </nav>
+  </div>
+</header>
+<div id="mobileMenuOverlay" class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+<aside id="mobileMenu" class="mobile-menu">
+  <div class="mobile-menu-header"><div><strong>Griden</strong><br><span>Energía y Tecnología</span></div><button class="mobile-close" onclick="closeMobileMenu()" aria-label="Cerrar menú">×</button></div>
+  <div class="mobile-menu-links">
+    <a href="/" onclick="closeMobileMenu()">Inicio</a><a href="/servicios" onclick="closeMobileMenu()">Servicios</a><a href="/catalogo" onclick="closeMobileMenu()">Productos</a><a href="/solarrate" onclick="closeMobileMenu()">SolarRate</a><a href="/conoce" onclick="closeMobileMenu()">Nosotros</a><a href="/impacto-social" onclick="closeMobileMenu()">Impacto social</a><a href="/contacto" onclick="closeMobileMenu()">Contacto</a><a href="javascript:void(0)" id="mobileAuthLink" onclick="openAuth(); closeMobileMenu();">Mi cuenta</a><a href="javascript:void(0)" id="mobileLogoutLink" onclick="logout(); closeMobileMenu();" style="display:none;">Cerrar sesión</a>
+  </div>
+</aside>
 
-      <button class="menu-toggle" onclick="openMobileMenu()" aria-label="Abrir menú">☰</button>
-
-      <nav class="desktop-nav">
-        <a href="/">Inicio</a>
-        <a href="/servicios">Servicios</a>
-        <a href="/catalogo">Productos</a>
-        <a href="/solarrate">SolarRate</a>
-        <a href="/conoce">Nosotros</a>
-        <a href="/impacto-social">Impacto social</a>
-        <a href="/contacto">Contacto</a>
-        <a href="javascript:void(0)" class="auth-link" id="authNavLink" onclick="openAuth()">Mi cuenta</a>
-        <a href="javascript:void(0)" class="auth-link" id="logoutLink" onclick="logout()" style="display:none;">Cerrar sesión</a>
-      </nav>
-    </div>
-  </header>
-
-  <div id="mobileMenuOverlay" class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
-
-  <aside id="mobileMenu" class="mobile-menu">
-    <div class="mobile-menu-header">
-      <div>
-        <strong>Griden</strong><br>
-        <span>Energía y Tecnología</span>
-      </div>
-      <button class="mobile-close" onclick="closeMobileMenu()" aria-label="Cerrar menú">×</button>
-    </div>
-
-    <div class="mobile-menu-links">
-      <a href="/" onclick="closeMobileMenu()">Inicio</a>
-      <a href="/servicios" onclick="closeMobileMenu()">Servicios</a>
-      <a href="/catalogo" onclick="closeMobileMenu()">Productos</a>
-      <a href="/solarrate" onclick="closeMobileMenu()">SolarRate</a>
-      <a href="/conoce" onclick="closeMobileMenu()">Nosotros</a>
-      <a href="/impacto-social" onclick="closeMobileMenu()">Impacto social</a>
-      <a href="/contacto" onclick="closeMobileMenu()">Contacto</a>
-      <a href="javascript:void(0)" id="mobileAuthLink" onclick="openAuth(); closeMobileMenu();">Mi cuenta</a>
-      <a href="javascript:void(0)" id="mobileLogoutLink" onclick="logout(); closeMobileMenu();" style="display:none;">Cerrar sesión</a>
-    </div>
-  </aside>
-
-<section id="catalogo" class="catalog-section">
-    <div class="container">
-      <div class="section-title">
-        <small>Catálogo Griden</small>
-        <h3>Productos y soluciones</h3>
-        <p>
-          Selecciona el producto de tu interés; verás fichas técnicas y opciones de compra.
-        </p>
-      </div>
-
-      <div class="category-grid">
-        <article class="category-card category-featured">
-          <div class="category-image">
-            <img src="/images/banner-scooters-griden.png" alt="Griden Scooters" alt="Electromovilidad Griden">
-          </div>
-          <div class="category-content">
-            <small>Electromovilidad</small>
-            <h4>Monopatines eléctricos</h4>
-                       <div class="category-actions">
-              <a class="producto-boton" href="#electromovilidad">Ver modelos</a>
-                         </div>
-          </div>
-        </article>
-
-        <article class="category-card">
-          <a href="/generacion-distribuida" class="producto-link">
-            <div class="category-image">
-              <img src="https://bepebblex.com/wp-content/uploads/2024/05/inversores-paneles-solares.jpg" alt="Generación distribuida">
-            </div>
-            <div class="category-content">
-              <small>Energía solar</small>
-              <h4>Generación distribuida</h4>
-              <p>Sistemas fotovoltaicos on-grid para hogares, empresas e industrias.</p>
-              <span class="producto-boton">Ingresar</span>
-            </div>
-          </a>
-        </article>
-
-        <article class="category-card">
-          <a href="/estructuras-paneles" class="producto-link">
-            <div class="category-image">
-              <img src="https://www.cealsa.es/assets/images/textareas/celo-clipado-portico-premontado.jpg" alt="Estructuras para paneles fotovoltaicos">
-            </div>
-            <div class="category-content">
-              <small>Generación distribuida</small>
-              <h4>Estructuras para paneles fotovoltaicos</h4>
-              <p><strong>Desde Bs899</strong></p>
-              <span class="producto-boton">Ingresar</span>
-            </div>
-          </a>
-        </article>
-
-        <article class="category-card">
-          <a href="/tablero-electrico" class="producto-link">
-            <div class="category-image">
-              <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1200,h_1200/https://electricidadpractica.com/wp-content/uploads/2025/07/componentes-tablero-electrico.webp" alt="Tablero eléctrico">
-            </div>
-            <div class="category-content">
-              <small>Automatización</small>
-              <h4>Tablero eléctrico</h4>
-              <p>Tableros para protección, distribución, control y automatización.</p>
-              <span class="producto-boton">Ingresar</span>
-            </div>
-          </a>
-        </article>
-
-        <article class="category-card">
-          <a href="/equipos-industriales" class="producto-link">
-            <div class="category-image">
-              <img src="https://ptgy.ru/upload/iblock/76e/v4yeoil7l3w79m1hc3po4sb86fcm10vb.png" alt="Equipos industriales">
-            </div>
-            <div class="category-content">
-              <small>Industria</small>
-              <h4>Equipos industriales</h4>
-              <p><strong>Desde Bs2.900</strong></p>
-              <span class="producto-boton">Ingresar</span>
-            </div>
-          </a>
-        </article>
-
-        <article class="category-card">
-          <a href="/automatizacion" class="producto-link">
-            <div class="category-image">
-              <img src="https://es.kexunelectric.com/upload/8230/20250421170702184877.webp" alt="Sistemas de automatización">
-            </div>
-            <div class="category-content">
-              <small>Control y monitoreo</small>
-              <h4>Sistemas de automatización</h4>
-              <p>Soluciones de control, monitoreo, sensores y automatización aplicada.</p>
-              <span class="producto-boton">Ingresar</span>
-            </div>
-          </a>
-        </article>
-
-        <article class="category-card">
-          <a href="/moto-electrica" class="producto-link">
-            <div class="category-image">
-              <img src="https://exclusivomotos.com/wp-content/uploads/2024/07/P90454047_lowRes_bmw-ce-04-riding-sho.jpg" alt="Moto eléctrica">
-            </div>
-            <div class="category-content">
-              <small>Electromovilidad</small>
-              <h4>Moto eléctrica</h4>
-              <p><strong>Desde Bs6.900</strong></p>
-              <span class="producto-boton">Ingresar</span>
-            </div>
-          </a>
-        </article>
-
-        <article class="category-card">
-          <a href="/cargador-electrico" class="producto-link">
-            <div class="category-image">
-              <img src="https://blog.guarconsa.com/wp-content/uploads/2022/05/Diseno-sin-titulo-1-1024x696.jpg" alt="Cargador eléctrico">
-            </div>
-            <div class="category-content">
-              <small>Electromovilidad</small>
-              <h4>Cargador eléctrico</h4>
-              <p><strong>Desde Bs5.900</strong></p>
-              <span class="producto-boton">Ingresar</span>
-            </div>
-          </a>
-        </article>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-kicker"><i class="fa-solid fa-layer-group"></i> Catálogo Griden</div>
+      <h2>Productos y soluciones <span>para energía, industria y movilidad</span></h2>
+      <p>Explora nuestras líneas principales: generación distribuida, electromovilidad, automatización, tableros, equipos eléctricos e infraestructura de carga.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#catalogo"><i class="fa-solid fa-table-cells-large"></i> Ver categorías</a>
+        <a class="btn btn-wa" href="https://wa.me/59169969051?text=Hola%20Griden,%20quisiera%20información%20sobre%20sus%20productos" target="_blank"><i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp</a>
+        <a class="btn btn-outline" href="/servicios"><i class="fa-solid fa-bolt"></i> Ver servicios</a>
       </div>
     </div>
-  </section>
-
-  <section id="electromovilidad" class="scooter-section">
-    <div class="container">
-      <div class="section-title">
-        <small>Línea scooters</small>
-        <h3>Monopatines eléctricos Griden</h3>
-              </div>
-
-      <div class="scooter-grid">
-        <article class="scooter-card">
-          <div class="scooter-badge">Urbano eficiente</div>
-          <img src="images/ecobaner.png" alt="Griden Eco">
-          <div class="scooter-content">
-            <small>Modelo Eco</small>
-            <h4>Griden Eco</h4>
-            <p>Modelo urbano de entrada, ideal para recorridos diarios y movilidad práctica.</p>
-            <ul>
-              <li>Batería de litio</li>
-              <li>Diseño plegable</li>
-              <li>Soporte técnico Griden</li>
-            </ul>
-            <a class="producto-boton" href="/scooter-eco">Ver ficha del Eco</a>
-          </div>
-        </article>
-
-        <article class="scooter-card">
-          <div class="scooter-badge">Confort urbano</div>
-          <img src="/images/M2/mbaner.png" alt="Griden Urban M2">
-          <div class="scooter-content">
-            <small>Modelo M2</small>
-            <h4>Griden Urban M2</h4>
-            <p>Alternativa equilibrada para clientes que buscan autonomía, estabilidad y comodidad.</p>
-            <ul>
-              <li>Uso urbano frecuente</li>
-              <li>Batería de litio</li>
-              <li>Ficha técnica disponible</li>
-            </ul>
-            <a class="producto-boton" href="/scooter-m2">Ver ficha del M2</a>
-          </div>
-        </article>
-
-        <article class="scooter-card">
-          <div class="scooter-badge">Más equipado</div>
-          <img src="images/e9probaner.png" alt="Griden Urban Pro E9">
-          <div class="scooter-content">
-            <small>Modelo E9Pro</small>
-            <h4>Griden Urban Pro E9</h4>
-            <p>Modelo con enfoque comercial superior para usuarios que buscan mayor desempeño.</p>
-            <ul>
-              <li>Diseño robusto</li>
-              <li>Mayor presencia visual</li>
-              <li>Documentación técnica</li>
-            </ul>
-            <a class="producto-boton" href="/scooter-e9pro">Ver ficha del E9Pro</a>
-          </div>
-        </article>
-
-        <article class="scooter-card">
-          <div class="scooter-badge">Gama superior</div>
-          <img src="https://blog.movistar.com.co/wp-content/uploads/2024/05/scooter-electrico.webp" alt="Griden T4 Max">
-          <div class="scooter-content">
-            <small>Modelo T4</small>
-            <h4>Griden T4 Max</h4>
-            <p>Modelo de mayor presencia dentro del lote, orientado a clientes que priorizan prestaciones.</p>
-            <ul>
-              <li>Modelo destacado</li>
-              <li>Ideal para comparación</li>
-              <li>Soporte postventa</li>
-            </ul>
-            <a class="producto-boton" href="/scooter-t4">Ver ficha del T4</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="compare-box">
-        <h4>Comparar modelos</h4>
-        <p>Revisa de forma rápida las diferencias entre Eco, M2, E9Pro y T4.</p>
-
-        <div class="compare-table-wrap">
-          <table class="compare-table">
-            <thead>
-              <tr>
-                <th>Modelo</th>
-                <th>Línea</th>
-                <th>Enfoque</th>
-                <th>Ficha</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Griden Eco</td>
-                <td>Entrada urbana</td>
-                <td>Movilidad diaria eficiente</td>
-                <td><a href="/scooter-eco">Ver</a></td>
-              </tr>
-              <tr>
-                <td>Griden Urban M2</td>
-                <td>Urbana intermedia</td>
-                <td>Equilibrio entre autonomía y comodidad</td>
-                <td><a href="/scooter-m2">Ver</a></td>
-              </tr>
-              <tr>
-                <td>Griden Urban Pro E9</td>
-                <td>Urbana superior</td>
-                <td>Mayor equipamiento y presencia</td>
-                <td><a href="/scooter-e9pro">Ver</a></td>
-              </tr>
-              <tr>
-                <td>Griden T4 Max</td>
-                <td>Gama superior</td>
-                <td>Prestaciones y robustez</td>
-                <td><a href="/scooter-t4">Ver</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section class="footer-links-section">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Sección Blog</h4>
-          <a href="/blog#solar">Tendencias en energía solar</a>
-          <a href="/blog#paneles">¿Cuántos paneles solares necesito?</a>
-          <a href="/blog#ahorro">Ahorro de energía en hogares y empresas</a>
-          <a href="/blog#electromovilidad">Electromovilidad en Bolivia</a>
-          <a href="/blog#gd">Generación distribuida en Bolivia</a>
-          <a href="/blog#automatizacion">Automatización industrial aplicada</a>
-          <a href="/blog#noticias">Noticias y novedades de Griden</a>
-        </div>
-
-        <div class="footer-col">
-          <h4>Atención al cliente</h4>
-          <a href="javascript:void(0)" onclick="openAuth()">Mi cuenta</a>
-          <a href="/contacto">Solicitar información</a>
-          <a href="https://wa.me/59169969051" target="_blank">Contacto por WhatsApp</a>
-          <a href="/preguntas-frecuentes">Preguntas frecuentes</a>
-        </div>
-
-        <div class="footer-col">
-          <h4>Sobre Griden</h4>
-          <p>
-            Griden es una empresa orientada a soluciones en energía, electromovilidad,
-            ingeniería eléctrica y tecnología, con enfoque en asesoramiento técnico,
-            importación y desarrollo de proyectos aplicados en Bolivia.
-            Síguenos en nuestras redes sociales.
-          </p>
-
-          <div class="footer-socials">
-            <a href="https://www.facebook.com/gridenenergia/" target="_blank" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/griden.bolivia/" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.tiktok.com/@griden.energa/" target="_blank" aria-label="TikTok">
-              <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/griden-bolivia/" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Información</h4>
-          <a href="/conoce">Conoce Griden</a>
-          <a href="/impacto-social">Impacto social</a>
-          <a href="/trabaja">Trabaja con nosotros</a>
-          <a href="/terminos">Términos y condiciones</a>
-          <a href="/privacidad">Política de privacidad</a>
-          <a href="/cookies">Política de cookies</a>
-          <a href="/reclamaciones">Libro de reclamaciones</a>
-        </div>
-      </div>
-
-      <div class="footer-bottom-line"></div>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Griden · Energía · Tecnología · Soluciones
-  </footer>
-
-<!-- MODAL LOGIN / REGISTRO -->
-  <div id="authModal" class="auth-modal">
-    <div class="auth-box">
-      <button class="close-auth" onclick="closeAuth()" aria-label="Cerrar">&times;</button>
-      <h3>Mi cuenta</h3>
-      <p class="auth-subtitle">Regístrate o inicia sesión para guardar tus datos y futuras consultas.</p>
-
-      <input type="email" id="email" placeholder="Correo electrónico" />
-      <input type="password" id="password" placeholder="Contraseña" />
-
-      <div class="auth-actions">
-        <button class="btn-register" onclick="register()">Registrarse</button>
-        <button class="btn-login" onclick="login()">Iniciar sesión</button>
-      </div>
-
-      <div id="authMessage"></div>
+    <div class="hero-panel"><img src="/images/banner-scooters-griden.png" alt="Catálogo Griden"></div>
+  </div>
+</section>
+<section id="catalogo" style="background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)">
+  <div class="container">
+    <div class="section-title"><small>Productos Griden</small><h3>Selecciona una categoría</h3><p>Cada línea tiene su propia página o ficha para revisar detalles, características, opciones de cotización y disponibilidad.</p></div>
+    <div class="grid">
+      <article class="card featured">
+        <div class="card-img"><img src="/images/banner-scooters-griden.png" alt="Electromovilidad Griden"></div>
+        <div class="card-content"><small>Electromovilidad</small><h4>Monopatines eléctricos</h4><p>Línea completa de scooters Griden: Eco, Urban M2, Urban Pro E9 y T4 Max. Ingresa a la página especializada para comparar modelos.</p><a class="producto-boton dark" href="/scooters"><i class="fa-solid fa-charging-station"></i> Ver línea scooters</a></div>
+      </article>
+      <article class="card"><a href="/generacion-distribuida" class="producto-link"><div class="card-img"><img src="https://bepebblex.com/wp-content/uploads/2024/05/inversores-paneles-solares.jpg" alt="Generación distribuida"></div><div class="card-content"><small>Energía solar</small><h4>Generación distribuida</h4><p>Sistemas fotovoltaicos on-grid para hogares, empresas e industrias.</p><span class="producto-boton">Ingresar <i class="fa-solid fa-arrow-right"></i></span></div></a></article>
+      <article class="card"><a href="/estructuras-paneles" class="producto-link"><div class="card-img"><img src="https://www.cealsa.es/assets/images/textareas/celo-clipado-portico-premontado.jpg" alt="Estructuras para paneles fotovoltaicos"></div><div class="card-content"><small>Generación distribuida</small><h4>Estructuras para paneles fotovoltaicos</h4><p><strong>Desde Bs899</strong></p><span class="producto-boton">Ingresar <i class="fa-solid fa-arrow-right"></i></span></div></a></article>
+      <article class="card"><a href="/tablero-electrico" class="producto-link"><div class="card-img"><img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1200,h_1200/https://electricidadpractica.com/wp-content/uploads/2025/07/componentes-tablero-electrico.webp" alt="Tablero eléctrico"></div><div class="card-content"><small>Automatización</small><h4>Tablero eléctrico</h4><p>Tableros para protección, distribución, control y automatización.</p><span class="producto-boton">Ingresar <i class="fa-solid fa-arrow-right"></i></span></div></a></article>
+      <article class="card"><a href="/equipos-industriales" class="producto-link"><div class="card-img"><img src="https://ptgy.ru/upload/iblock/76e/v4yeoil7l3w79m1hc3po4sb86fcm10vb.png" alt="Equipos industriales"></div><div class="card-content"><small>Industria</small><h4>Equipos industriales</h4><p><strong>Desde Bs2.900</strong></p><span class="producto-boton">Ingresar <i class="fa-solid fa-arrow-right"></i></span></div></a></article>
+      <article class="card"><a href="/automatizacion" class="producto-link"><div class="card-img"><img src="https://es.kexunelectric.com/upload/8230/20250421170702184877.webp" alt="Sistemas de automatización"></div><div class="card-content"><small>Control y monitoreo</small><h4>Sistemas de automatización</h4><p>Soluciones de control, monitoreo, sensores y automatización aplicada.</p><span class="producto-boton">Ingresar <i class="fa-solid fa-arrow-right"></i></span></div></a></article>
+      <article class="card"><a href="/moto-electrica" class="producto-link"><div class="card-img"><img src="https://exclusivomotos.com/wp-content/uploads/2024/07/P90454047_lowRes_bmw-ce-04-riding-sho.jpg" alt="Moto eléctrica"></div><div class="card-content"><small>Electromovilidad</small><h4>Moto eléctrica</h4><p><strong>Desde Bs6.900</strong></p><span class="producto-boton">Ingresar <i class="fa-solid fa-arrow-right"></i></span></div></a></article>
+      <article class="card"><a href="/cargador-electrico" class="producto-link"><div class="card-img"><img src="https://blog.guarconsa.com/wp-content/uploads/2022/05/Diseno-sin-titulo-1-1024x696.jpg" alt="Cargador eléctrico"></div><div class="card-content"><small>Electromovilidad</small><h4>Cargador eléctrico</h4><p><strong>Desde Bs5.900</strong></p><span class="producto-boton">Ingresar <i class="fa-solid fa-arrow-right"></i></span></div></a></article>
     </div>
   </div>
-<!-- FIREBASE COMPAT -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-  
-<script>
-function openMobileMenu() {
-  document.getElementById("mobileMenu").classList.add("active");
-  document.getElementById("mobileMenuOverlay").classList.add("active");
-}
+</section>
+<section>
+  <div class="container">
+    <div class="section-title"><small>Diferencial Griden</small><h3>Catálogo con enfoque técnico y comercial</h3><p>No solo mostramos productos: priorizamos información técnica, soporte, trazabilidad y asesoramiento para una compra mejor informada.</p></div>
+    <div class="trust-grid">
+      <div class="trust-card"><i class="fa-solid fa-magnifying-glass-chart"></i><h4>Selección técnica</h4><p>Orientación para elegir equipos de acuerdo con la aplicación, presupuesto y condiciones reales de uso.</p></div>
+      <div class="trust-card"><i class="fa-solid fa-file-shield"></i><h4>Documentación</h4><p>Enfoque en fichas, manuales, certificaciones, placas y trazabilidad según el tipo de producto.</p></div>
+      <div class="trust-card"><i class="fa-solid fa-headset"></i><h4>Soporte postventa</h4><p>Acompañamiento técnico antes y después de la compra para reducir riesgos y mejorar la experiencia.</p></div>
+    </div>
+  </div>
+</section>
 
-function closeMobileMenu() {
-  document.getElementById("mobileMenu").classList.remove("active");
-  document.getElementById("mobileMenuOverlay").classList.remove("active");
-}
+<section class="footer-links-section">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Sección Blog</h4>
+        <a href="/blog#solar">Tendencias en energía solar</a>
+        <a href="/blog#paneles">¿Cuántos paneles solares necesito?</a>
+        <a href="/blog#ahorro">Ahorro de energía en hogares y empresas</a>
+        <a href="/blog#electromovilidad">Electromovilidad en Bolivia</a>
+        <a href="/blog#gd">Generación distribuida en Bolivia</a>
+        <a href="/blog#automatizacion">Automatización industrial aplicada</a>
+        <a href="/blog#noticias">Noticias y novedades de Griden</a>
+      </div>
+      <div class="footer-col">
+        <h4>Atención al cliente</h4>
+        <a href="javascript:void(0)" onclick="openAuth()">Mi cuenta</a>
+        <a href="/contacto">Solicitar información</a>
+        <a href="https://wa.me/59169969051" target="_blank">Contacto por WhatsApp</a>
+        <a href="/preguntas-frecuentes">Preguntas frecuentes</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sobre Griden</h4>
+        <p>Griden es una empresa orientada a soluciones en energía, electromovilidad, ingeniería eléctrica y tecnología, con enfoque en asesoramiento técnico, importación y desarrollo de proyectos aplicados en Bolivia. Síguenos en nuestras redes sociales.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/gridenenergia/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/griden.bolivia/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@griden.energa/" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.linkedin.com/company/griden-bolivia/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Información</h4>
+        <a href="/conoce">Conoce Griden</a>
+        <a href="/impacto-social">Impacto social</a>
+        <a href="/trabaja">Trabaja con nosotros</a>
+        <a href="/terminos">Términos y condiciones</a>
+        <a href="/privacidad">Política de privacidad</a>
+        <a href="/cookies">Política de cookies</a>
+        <a href="/reclamaciones">Libro de reclamaciones</a>
+      </div>
+    </div>
+    <div class="footer-bottom-line"></div>
+  </div>
+</section>
+<footer>© 2026 Griden · Energía · Tecnología · Soluciones</footer>
+<div id="authModal" class="auth-modal">
+  <div class="auth-box">
+    <button class="close-auth" onclick="closeAuth()" aria-label="Cerrar">&times;</button>
+    <h3>Mi cuenta</h3>
+    <p class="auth-subtitle">Regístrate o inicia sesión para guardar tus datos y futuras consultas.</p>
+    <input type="email" id="email" placeholder="Correo electrónico" />
+    <input type="password" id="password" placeholder="Contraseña" />
+    <div class="auth-actions">
+      <button class="btn-register" onclick="register()">Registrarse</button>
+      <button class="btn-login" onclick="login()">Iniciar sesión</button>
+    </div>
+    <div id="authMessage"></div>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script>
+function openMobileMenu(){document.getElementById("mobileMenu").classList.add("active");document.getElementById("mobileMenuOverlay").classList.add("active");}
+function closeMobileMenu(){document.getElementById("mobileMenu").classList.remove("active");document.getElementById("mobileMenuOverlay").classList.remove("active");}
+function openAuth(){document.getElementById("authModal").style.display="flex";}
+function closeAuth(){document.getElementById("authModal").style.display="none";}
 </script>
-</body>
-</html>
+</body></html>
