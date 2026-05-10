@@ -30,7 +30,88 @@ nav a:hover{color:var(--accent)}nav a:hover:after{width:100%}
 .mobile-close{border:0;background:transparent;font-size:28px;color:var(--muted);cursor:pointer}.mobile-menu-links{display:flex;flex-direction:column;padding:10px 0}
 .mobile-menu-links a{text-decoration:none;color:var(--primary);font-weight:700;padding:14px 20px;border-bottom:1px solid #f1f5f9}
 section{padding:82px 0}
-.hero{position:relative;overflow:hidden;color:#fff;padding:92px 0 82px;background:radial-gradient(circle at 16% 18%,rgba(56,189,248,.28),transparent 28%),radial-gradient(circle at 86% 22%,rgba(22,163,74,.20),transparent 24%),linear-gradient(135deg,#06101f 0%,#0f172a 42%,#1e3a8a 100%)}
+.hero{
+position:relative;
+overflow:hidden;
+color:#fff;
+padding:92px 0 82px;
+min-height:720px;
+display:flex;
+align-items:center;
+background:#06101f
+}
+
+/* VIDEO */
+.hero-video{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:0;
+filter:
+brightness(.70)
+saturate(1.1)
+contrast(1.05)
+}
+
+/* OVERLAY AZUL */
+.hero-overlay{
+position:absolute;
+inset:0;
+z-index:1;
+
+background:
+radial-gradient(
+circle at 15% 20%,
+rgba(56,189,248,.18),
+transparent 28%
+),
+
+radial-gradient(
+circle at 85% 25%,
+rgba(22,163,74,.10),
+transparent 24%
+),
+
+linear-gradient(
+135deg,
+rgba(6,16,31,.82) 0%,
+rgba(15,23,42,.72) 42%,
+rgba(30,58,138,.62) 100%
+)
+}
+
+/* EFECTO LINEAS */
+.hero:before{
+content:"";
+position:absolute;
+inset:0;
+z-index:2;
+
+background:
+linear-gradient(
+115deg,
+transparent 0 52%,
+rgba(255,255,255,.045) 52% 53%,
+transparent 53%
+);
+
+background-size:260px 260px;
+
+opacity:.55;
+
+animation:gridMove 18s linear infinite
+}
+
+.hero-grid{
+position:relative;
+z-index:3;
+display:grid;
+grid-template-columns:1fr;
+gap:48px;
+align-items:center
+}
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 0 52%,rgba(255,255,255,.045) 52% 53%,transparent 53%);background-size:260px 260px;opacity:.55;animation:gridMove 18s linear infinite}
 @keyframes gridMove{to{background-position:260px 260px}}
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
@@ -77,6 +158,15 @@ section{padding:82px 0}
 </aside>
 
 <section class="hero">
+
+  <!-- VIDEO FONDO -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="/video/scooter.mp4" type="video/mp4">
+  </video>
+
+  <!-- OVERLAY -->
+  <div class="hero-overlay"></div>
+
   <div class="container hero-grid">
     <div>
       <div class="hero-kicker"><i class="fa-solid fa-charging-station"></i> Línea scooters</div>
